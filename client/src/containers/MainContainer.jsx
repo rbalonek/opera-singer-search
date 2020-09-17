@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
+import SingerPage from '../screens/SingerPage';
 
 
 
 
 export default function MainContainer(props) {
   
-  
+
   const history = useHistory();
   const { currentUser } = props;
 
   
 
   return (
-    <h1>
-hi
+   <Switch>
+
     
-    </h1>
+
+      <Route path="/singer_page/">
+        <SingerPage
+          currentUser={currentUser}
+        />
+      </Route>
+    </Switch>
   )
 }
