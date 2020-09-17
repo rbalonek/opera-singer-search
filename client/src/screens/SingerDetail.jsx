@@ -13,7 +13,7 @@ export default function SingerDetail(props) {
     }
     fetchSinger()
   }, []);
-console.log(singer)
+// console.log(singer)
   return (
     <div>
       <h1>Singer</h1>

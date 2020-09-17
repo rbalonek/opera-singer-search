@@ -11,6 +11,7 @@ export default function SingerPage(props) {
       <p>Name : {currentUser.username}</p>
       <img src={currentUser.user_img} alt={currentUser.username} />
       <p>Bio : {currentUser.bio}</p>
+      
     </div>
   )
 }

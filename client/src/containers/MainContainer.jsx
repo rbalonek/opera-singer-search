@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import OperaDetail from '../screens/OperaDetail';
 import Operas from '../screens/Operas';
+import RoleDetail from '../screens/RoleDetail';
 import SingerDetail from '../screens/SingerDetail';
 import SingerPage from '../screens/SingerPage';
 import Singers from '../screens/Singers';
 import { getAllOperas } from '../services/operas';
+import { getAllRoles, getAllRolesInOpera } from '../services/roles';
 import { getAllUsers } from '../services/users';
 
 
@@ -13,6 +15,7 @@ import { getAllUsers } from '../services/users';
 
 export default function MainContainer(props) {
   const [operas, setOperas] = useState([]);
+  const [roles, setRoles] = useState([]);
   const [singers, setSingers] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
@@ -22,16 +25,16 @@ export default function MainContainer(props) {
       const operaArray = await getAllOperas();
       setOperas(operaArray);
     }
-    // const fetchRoles = async () => {
-    //   const roleArray = await getAllRoles ();
-    //   setRoles(roleArray);
-    // }
+    const fetchRoles = async (id) => {
+      const roleArray = await getAllRoles();
+      setRoles(roleArray);
+    }
     const fetchSingers = async () => {
       const singerArray = await getAllUsers();
       setSingers(singerArray);
     }
     fetchOperas();
-    // fetchRoles();
+    fetchRoles();
     fetchSingers();
   }, [])
 
@@ -42,10 +45,23 @@ export default function MainContainer(props) {
       
     <Route path='/singers/:id'>
     <SingerDetail />
-    </Route>
+      </Route>
+      
+      
       
     <Route path='/operas/:id'>
-    <OperaDetail />
+        <OperaDetail
+        roles={roles}
+        />
+    </Route>
+
+    <Route path='/roles/:id'>
+        <RoleDetail
+          roles={roles}
+          operas={operas}
+          currentUser={currentUser}
+          singers={singers}
+        />
     </Route>
 
    <Route path="/operas/">
