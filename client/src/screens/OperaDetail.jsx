@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
+import {Link} from "react-router-dom"
 import { useParams } from 'react-router-dom';
 import { getOneOpera, getRolesFromOneOpera } from '../services/operas';
 import { getAllRolesInOpera } from '../services/roles';
@@ -8,7 +9,7 @@ export default function OperaDetail(props) {
   const [opera, setOpera] = useState(null)
   const { id } = useParams()
   
-  ///Get er done here but make more efficient l
+  ///Get er done here but make more efficient later
   const roles = props.roles.filter(role => role.opera_id === (opera && opera.id))
   
   
@@ -20,7 +21,7 @@ export default function OperaDetail(props) {
   
     fetchOpera()
   }, []);
-  console.log(roles)
+  // console.log(roles)
    
   return (
     <div>
@@ -32,7 +33,7 @@ export default function OperaDetail(props) {
           <h3>{opera.composer}</h3>
           <img src={opera.composer_img} alt={opera.composer} />
           {roles.map(role => (
-            <p>{role.name}</p>
+            <Link to={`/roles/${role.id}`}> <p>{role.name}</p></Link>
           ))}
         </>
       }

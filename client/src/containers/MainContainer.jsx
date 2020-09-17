@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import OperaDetail from '../screens/OperaDetail';
 import Operas from '../screens/Operas';
+import RoleDetail from '../screens/RoleDetail';
 import SingerDetail from '../screens/SingerDetail';
 import SingerPage from '../screens/SingerPage';
 import Singers from '../screens/Singers';
@@ -44,11 +45,21 @@ export default function MainContainer(props) {
       
     <Route path='/singers/:id'>
     <SingerDetail />
-    </Route>
+      </Route>
+      
+      
       
     <Route path='/operas/:id'>
         <OperaDetail
         roles={roles}
+        />
+    </Route>
+
+    <Route path='/roles/:id'>
+        <RoleDetail
+        roles={roles}
+          operas={operas}
+          currentUser={currentUser}
         />
     </Route>
 
