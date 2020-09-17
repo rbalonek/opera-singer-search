@@ -57,9 +57,10 @@ export default function MainContainer(props) {
 
     <Route path='/roles/:id'>
         <RoleDetail
-        roles={roles}
+          roles={roles}
           operas={operas}
           currentUser={currentUser}
+          singers={singers}
         />
     </Route>
 

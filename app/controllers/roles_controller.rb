@@ -9,10 +9,18 @@ class RolesController < ApplicationController
     render json: @roles
   end
 
+  ### Assinging roles to users
 def assign_role_to_user
   @role = Role.find(params[:id])
   @role.users << @current_user
 end
+
+ ### Show all users that belong to role
+ def  users_belong_to_role
+  @role = Role.find(params[:id])
+  # @role.users << 
+  render json: @role.users, include: :users
+ end
 
   # GET /roles/1
   def show

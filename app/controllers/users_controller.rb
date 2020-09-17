@@ -8,6 +8,12 @@ class UsersController < ApplicationController
     render json: @users
   end
 
+  ### Show all roles that belong to user
+ def  roles_belong_to_user
+  @user = User.find(params[:id])
+  render json: @user, include: :roles
+ end
+
   # GET /users/1
   def show
     render json: @user
