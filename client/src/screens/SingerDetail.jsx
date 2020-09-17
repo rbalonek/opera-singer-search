@@ -18,13 +18,17 @@ export default function SingerDetail(props) {
     }
     const fetchRoles = async () => {
       const rolesArray = await showRolesForUser(id);
-    console.log(rolesArray)
+    // console.log(rolesArray)
       setRoles(rolesArray);
     }
     fetchSinger()
     fetchRoles()
 
   }, []);
+
+
+console.log(roles.roles)
+
   return (
     <div>
       <h1>Singer</h1>
@@ -39,3 +43,4 @@ export default function SingerDetail(props) {
     </div>
   )
 }
+   

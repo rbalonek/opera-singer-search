@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   #Custom Routes
   get '/operas/search', to: 'operas#search'
 
