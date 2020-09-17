@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  belongs_to_and_has_many :roles
-  
+  has_and_belongs_to_many :roles
+
   has_secure_password
 
   validates :username, presence: true, uniqueness: true
