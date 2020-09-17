@@ -1,5 +1,6 @@
 class RolesController < ApplicationController
   before_action :set_role, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: :assign_role_to_user
 
   # GET /roles
   def index
@@ -7,6 +8,11 @@ class RolesController < ApplicationController
 
     render json: @roles
   end
+
+def assign_role_to_user
+  @role = Role.find(params[:id])
+  @role.users << @current_user
+end
 
   # GET /roles/1
   def show

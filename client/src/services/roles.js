@@ -30,7 +30,7 @@ export const deleteRole = async (id) => {
   return resp.data;
 };
 
-export const addRole = async (OperaId) => {
-  const resp = await api.get(`/operas/${OperaId}/roles/`);
+export const addRole = async ( RoleId ) => {
+  const resp = await api.post(`/users/roles/${RoleId}`);
   return resp.data;
 };

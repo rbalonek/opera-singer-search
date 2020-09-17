@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   #Custom Routes
   get '/operas/search', to: 'operas#search'
 
+  post '/users/roles/:id', to: 'roles#assign_role_to_user'
 
   resources :users
   resources :roles
