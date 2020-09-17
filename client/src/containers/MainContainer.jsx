@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
+import OperaDetail from '../screens/OperaDetail';
 import Operas from '../screens/Operas';
 import SingerPage from '../screens/SingerPage';
 import { getAllOperas } from '../services/operas';
@@ -34,7 +35,11 @@ export default function MainContainer(props) {
   
 
   return (
-   <Switch>
+    <Switch>
+      
+    <Route path='/operas/:id'>
+    <OperaDetail />
+    </Route>
 
    <Route path="/operas/">
         <Operas
