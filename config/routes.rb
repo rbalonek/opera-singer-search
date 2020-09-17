@@ -7,10 +7,10 @@ Rails.application.routes.draw do
 
 
 ###Showing users on roles page
-  get '/users/role/:id', to: 'users#users_belong_to_role'
+get '/roles/user/:id', to: 'roles#users_belong_to_role'
 
   ###Showing roles on users page
-  get '/roles/user/:id', to: 'roles#roles_belong_to_user'
+  get '/users/role/:id', to: 'users#roles_belong_to_user'
 
   
   resources :users

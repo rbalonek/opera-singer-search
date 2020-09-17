@@ -6,7 +6,6 @@ export default function SingerPage(props) {
   console.log({currentUser})
   return (
     <div>
-      <Link to='/AddRole'><button>Add Role</button></Link>
       <h1>SINGER PAGE</h1>
       <p>Name : {currentUser.username}</p>
       <img src={currentUser.user_img} alt={currentUser.username} />

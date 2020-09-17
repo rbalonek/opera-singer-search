@@ -9,7 +9,7 @@ export default function RoleDetail(props) {
   const [users, setUsers] = useState()
   const { id } = useParams();
   // const { currentUser } = props;
-  // const userId = 
+  
   
 
   useEffect(() => {
@@ -30,7 +30,10 @@ export default function RoleDetail(props) {
     const newRole = await addRole(id);
     setRole(newRole);
   }
+
 console.log(users)
+
+  
   return (
     <div>
       <h1>ROLE DETAIL</h1>
