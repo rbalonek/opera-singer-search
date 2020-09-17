@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   #Custom Routes
   get '/operas/search', to: 'operas#search'
 
@@ -7,18 +8,20 @@ Rails.application.routes.draw do
 
 
 ###Showing users on roles page
-  get '/users/role/:id', to: 'users#users_belong_to_role'
+get '/roles/:id', to: 'roles#users_belong_to_role'
 
   ###Showing roles on users page
-  get '/roles/user/:id', to: 'roles#roles_belong_to_user'
+  get '/singers/:id', to: 'users#roles_belong_to_user'
 
+
+  post '/auth/login', to: 'authentication#login'
+  get '/auth/verify', to: 'authentication#verify'
   
   resources :users
   resources :roles
   resources :operas
 
-  post '/auth/login', to: 'authentication#login'
-  get '/auth/verify', to: 'authentication#verify'
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 

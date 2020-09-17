@@ -34,3 +34,8 @@ export const addRole = async ( RoleId ) => {
   const resp = await api.post(`/users/roles/${RoleId}`);
   return resp.data;
 };
+
+export const showRolesForUser = async ( userId ) => {
+  const resp = await api.get(`/singers/${userId}`);
+  return resp.data;
+};

@@ -44,7 +44,9 @@ export default function MainContainer(props) {
     <Switch>
       
     <Route path='/singers/:id'>
-    <SingerDetail />
+    <SingerDetail 
+    
+        />
       </Route>
       
       
