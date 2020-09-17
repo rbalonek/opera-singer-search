@@ -6,6 +6,7 @@ import SingerDetail from '../screens/SingerDetail';
 import SingerPage from '../screens/SingerPage';
 import Singers from '../screens/Singers';
 import { getAllOperas } from '../services/operas';
+import { getAllRoles } from '../services/roles';
 import { getAllUsers } from '../services/users';
 
 
@@ -13,6 +14,7 @@ import { getAllUsers } from '../services/users';
 
 export default function MainContainer(props) {
   const [operas, setOperas] = useState([]);
+  const [roles, setRoles] = useState([]);
   const [singers, setSingers] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
@@ -22,16 +24,16 @@ export default function MainContainer(props) {
       const operaArray = await getAllOperas();
       setOperas(operaArray);
     }
-    // const fetchRoles = async () => {
-    //   const roleArray = await getAllRoles ();
-    //   setRoles(roleArray);
-    // }
+    const fetchRoles = async () => {
+      const roleArray = await getAllRoles();
+      setRoles(roleArray);
+    }
     const fetchSingers = async () => {
       const singerArray = await getAllUsers();
       setSingers(singerArray);
     }
     fetchOperas();
-    // fetchRoles();
+    fetchRoles();
     fetchSingers();
   }, [])
 
@@ -45,7 +47,9 @@ export default function MainContainer(props) {
     </Route>
       
     <Route path='/operas/:id'>
-    <OperaDetail />
+        <OperaDetail
+          roles={roles}
+        />
     </Route>
 
    <Route path="/operas/">

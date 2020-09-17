@@ -5,7 +5,8 @@ import { getOneOpera } from '../services/operas';
 
 export default function OperaDetail(props) {
   const [opera, setOpera] = useState(null)
-  const {id} = useParams()
+  const { id } = useParams()
+  const { roles } = props;
 
   
   
@@ -18,7 +19,7 @@ export default function OperaDetail(props) {
    
     fetchOpera()
   }, []);
-
+console.log(roles)
   return (
     <div>
       <h1>Opera Detail!</h1>
@@ -27,7 +28,10 @@ export default function OperaDetail(props) {
         <>
           <h3>{opera.name}</h3>
           <h3>{opera.composer}</h3>
-          <img src={opera.composer_img} alt={opera.composer}/>
+          <img src={opera.composer_img} alt={opera.composer} />
+          {roles.map(role => (
+            <p>{role.name}</p>
+          ))}
         </>
       }
     </div>

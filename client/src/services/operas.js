@@ -10,7 +10,7 @@ export const getOneOpera = async (id) => {
   return resp.data;
 }
 
-// export const operaSearch = async (query) => {
-//   const resp = api.get(`/operas/search?name=${query}`)
-//   return resp.data;
-// }
+export const operaSearch = async (query) => {
+  const resp = api.get(`/operas/search?name=${query}`)
+  return resp.data;
+}

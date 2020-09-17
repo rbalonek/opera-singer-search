@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #Custom Routes
+  get '/operas/search', to: 'operas#search'
+
+
   resources :users
   resources :roles
   resources :operas
