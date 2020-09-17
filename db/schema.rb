@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_013045) do
+ActiveRecord::Schema.define(version: 2020_09_17_141612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_09_17_013045) do
     t.string "era"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "role_id"
+    t.index ["role_id"], name: "index_operas_on_role_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -44,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_013045) do
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 
+  add_foreign_key "operas", "roles"
   add_foreign_key "roles", "operas"
   add_foreign_key "users", "roles"
 end

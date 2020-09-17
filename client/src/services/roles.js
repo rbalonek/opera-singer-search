@@ -5,6 +5,11 @@ export const getAllRoles = async () => {
   return resp.data;
 };
 
+export const getAllRolesInOpera = async (opera_id) => {
+  const resp = await api.get(`operas/${opera_id}`);
+  return resp.data;
+};
+
 export const getOneRole = async (id) => {
   const resp = await api.get(`/roles/${id}`);
   return resp.data;

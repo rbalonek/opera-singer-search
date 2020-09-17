@@ -10,7 +10,13 @@ export const getOneOpera = async (id) => {
   return resp.data;
 }
 
+
+export const getRolesFromOneOpera = async (id) => {
+  const resp = await api.get(`/operas/${id}/roles`)
+  return resp.data;
+}
+
 export const operaSearch = async (query) => {
   const resp = api.get(`/operas/search?name=${query}`)
-  return resp.data;
+  // return resp.data;
 }

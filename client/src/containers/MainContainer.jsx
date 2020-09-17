@@ -6,7 +6,7 @@ import SingerDetail from '../screens/SingerDetail';
 import SingerPage from '../screens/SingerPage';
 import Singers from '../screens/Singers';
 import { getAllOperas } from '../services/operas';
-import { getAllRoles } from '../services/roles';
+import { getAllRoles, getAllRolesInOpera } from '../services/roles';
 import { getAllUsers } from '../services/users';
 
 
@@ -24,7 +24,7 @@ export default function MainContainer(props) {
       const operaArray = await getAllOperas();
       setOperas(operaArray);
     }
-    const fetchRoles = async () => {
+    const fetchRoles = async (id) => {
       const roleArray = await getAllRoles();
       setRoles(roleArray);
     }
@@ -48,7 +48,7 @@ export default function MainContainer(props) {
       
     <Route path='/operas/:id'>
         <OperaDetail
-          roles={roles}
+        roles={roles}
         />
     </Route>
 
