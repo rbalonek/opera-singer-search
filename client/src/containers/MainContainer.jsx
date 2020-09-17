@@ -3,14 +3,16 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import OperaDetail from '../screens/OperaDetail';
 import Operas from '../screens/Operas';
 import SingerPage from '../screens/SingerPage';
+import Singers from '../screens/Singers';
 import { getAllOperas } from '../services/operas';
+import { getAllUsers } from '../services/users';
 
 
 
 
 export default function MainContainer(props) {
   const [operas, setOperas] = useState([]);
-
+  const [singers, setSingers] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
 
@@ -23,13 +25,13 @@ export default function MainContainer(props) {
     //   const roleArray = await getAllRoles ();
     //   setRoles(roleArray);
     // }
-    // const fetchSingers = async () => {
-    //   const singerArray = await getAllUsers();
-    //   setSingers(singerArray);
-    //}
+    const fetchSingers = async () => {
+      const singerArray = await getAllUsers();
+      setSingers(singerArray);
+    }
     fetchOperas();
     // fetchRoles();
-    // fetchSingers();
+    fetchSingers();
   }, [])
 
   
@@ -47,6 +49,14 @@ export default function MainContainer(props) {
           currentUser={currentUser}
         />
  </Route>
+
+ <Route path="/singers">
+ <Singers
+   singers={singers}
+   currentUser={currentUser}
+      />
+      </Route>
+      
 
       <Route path="/singer_page/">
         <SingerPage
