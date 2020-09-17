@@ -11,5 +11,6 @@ export const getOneUser = async (id) => {
 };
 
 export const showUsersForRole = async ( roleId ) => {
-  const resp = await api.get(`/users/role/${roleId}`);
+  const resp = await api.get(`/roles/${roleId}`);
+  return resp.data;
 };

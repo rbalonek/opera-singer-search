@@ -36,5 +36,6 @@ export const addRole = async ( RoleId ) => {
 };
 
 export const showRolesForUser = async ( userId ) => {
-  const resp = await api.get(`/roles/user/${userId}`);
+  const resp = await api.get(`/singers/${userId}`);
+  return resp.data;
 };

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   ### Show all roles that belong to user
  def  roles_belong_to_user
   @user = User.find(params[:id])
+  puts @user.inspect
   render json: @user, include: :roles
  end
 
