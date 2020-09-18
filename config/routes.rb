@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :blogs
+  
   #Custom Routes
   get '/operas/search', to: 'operas#search'
 
@@ -13,10 +13,13 @@ get '/roles/:id', to: 'roles#users_belong_to_role'
   ###Showing roles on users page
   get '/singers/:id', to: 'users#roles_belong_to_user'
 
+### Showing blogs for users 
+get 'blogs/user/:id', to: 'blogs#blogs_for_user'
+
 
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
-  
+  resources :blogs
   resources :users
   resources :roles
   resources :operas

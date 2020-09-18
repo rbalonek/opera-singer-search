@@ -110,8 +110,11 @@
 # Tatyana = Role.create!(name: "Tatyana" , opera_id: 9)
 # Olga = Role.create!(name: "Olga" , opera_id: 9)
 
+###Blogs
 
+Blog1 = Blog.create!(title: "Onegin" , opera_company: "company", date: "dates", img:"sdkjhasd", text:"text", user_id: 1)
 
 puts "#{Role.count} Roles created"
 puts "#{Opera.count} Operas created"
 puts "#{User.count} Users created"
+puts "#{Blog.count} Blogs created"

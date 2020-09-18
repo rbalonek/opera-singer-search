@@ -20,7 +20,7 @@ export default function SingerDetail(props) {
       const rolesArray = await showRolesForUser(id);
       setRoles(rolesArray);
       setPerformedRoles(rolesArray.roles);
-      console.log("roles array", rolesArray.roles[0].name);
+      // console.log("roles array", rolesArray.roles[0].name);
       // console.log(performedRoles)
       // console.log(roles)
     };
