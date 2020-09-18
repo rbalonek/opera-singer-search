@@ -5,27 +5,35 @@ import { showRolesForUser } from '../services/roles';
 
 export default function SingerPage(props) {
   const [roles, setRoles] = useState([])
-  const [blogs, setBlogs] = useState([])
-  const [delayBlog, setDelayBlog] = useState([])
+  // const [blogs, setBlogs] = useState([])
+  // const [delayBlog, setDelayBlog] = useState([])
   const { currentUser } = props;
   // const { blogs } = props.blogs;
 
+  const [blogs, setBlogs] = useState([])
+  const [delayBlog, setDelayBlog] = useState([])
+
+  
   useEffect(() => {
     const fetchRoles = async () => {
       const rolesArray = await showRolesForUser(currentUser.id);
       setRoles(rolesArray);
     }
     const fetchBlogs = async () => {
-      const rolesArray = await getAllUserBlogs(currentUser.id);
-      setBlogs(rolesArray);
-      setDelayBlog(rolesArray);
+      const blogsArray = await getAllUserBlogs(currentUser.id);
+      setBlogs(blogsArray);
     }
-    
-    
+
+    // const fetchBlogsLater = async () => {
+    //   const blogsArray = await getAllUserBlogs(currentUser.id);
+    //   setDelayBlog(blogsArray);
+    // }
+
     fetchRoles();
     fetchBlogs();
-    
+    // fetchBlogsLater()
   }, [])
+
 
   // const runDelayBlogs() => {
   //   {delayBlog.map(blog => (
@@ -34,7 +42,7 @@ export default function SingerPage(props) {
   // }
 
   console.log('blogs', blogs)
-  console.log('displayblogs', delayBlog)
+  console.log('delay blogs', delayBlog)
   // console.log( currentUser.id )
   
   return (
@@ -49,13 +57,11 @@ export default function SingerPage(props) {
       </>
       }
       {
-        delayBlog === [] ?
-          <div>
-          <p>Loading...</p>
-          </div> :
+        delayBlog !== [] &&
         <>
         
-            </>
+          </>
+          
       }
     </div>
   )
