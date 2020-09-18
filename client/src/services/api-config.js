@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000' // This will be the HEROKU app eventually.
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://opera-singer-search.herokuapp.com/' : 'http://localhost:3000' 
 
 const api = axios.create({
   baseURL: baseUrl
 })
 
 export default api;
+
