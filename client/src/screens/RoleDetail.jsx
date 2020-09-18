@@ -44,7 +44,7 @@ export default function RoleDetail(props) {
         {role && (
           <>
             {users.map((user) => (
-              <p>{user.username}</p>
+             <Link to={`/singers/${user.id}`}> <p>{user.username}</p> </Link>
             ))}
           </>
         )}

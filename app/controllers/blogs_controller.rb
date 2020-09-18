@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :update, :destroy]
+  before_action :set_blog, only: [:index, :create, :show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /blogs
   def index
@@ -13,12 +14,19 @@ class BlogsController < ApplicationController
     render json: @blog
   end
 
+  # ##Show all blogs for user
+  def blogs_for_user
+    @blogs = Blog.find(params[:id])
+    render json: @blogs
+  end
+
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
+    @blog.user = @current_user
 
     if @blog.save
-      render json: @blog, status: :created, location: @blog
+      render json: @blog, status: :created
     else
       render json: @blog.errors, status: :unprocessable_entity
     end
@@ -39,13 +47,14 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def blog_params
-      params.require(:blog).permit(:title, :img, :text, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blogs = Blog.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def blog_params
+    params.require(:blog).permit(:title, :img, :text, :opera_company, :date)
+  end
 end

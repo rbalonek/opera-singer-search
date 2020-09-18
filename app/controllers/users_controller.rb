@@ -14,6 +14,8 @@ class UsersController < ApplicationController
   puts @user.inspect
   render json: @user, include: :roles
  end
+ 
+
 
   # GET /users/1
   def show
