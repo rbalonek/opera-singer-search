@@ -1,0 +1,39 @@
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.opera_card_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.opera_card {
+  background-color: rgb(242, 199, 109);
+  height: 200px;
+  width: 250px;
+  text-align: center;
+  border-radius: 20%;
+  margin: 5px;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.opera_card--composer {
+}
+
+.opera_card--img {
+  height: 75px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.opera_card--name {
+}
+
+.opera_card--view_roles {
+  /* color: white; */
+}
