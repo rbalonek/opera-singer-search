@@ -36,7 +36,7 @@ export default function OperaDetail(props) {
               alt={opera.composer}
             />
             <h3 className="opera_detail--opera_composer">{opera.composer}</h3>
-            <h2>Roles:</h2>
+            <h2 className="opera_detail--roles_text">Roles:</h2>
             <div className="opera_detail--opera_roles--container">
               {roles.map((role) => (
                 <Link to={`/roles/${role.id}`}>

@@ -23,5 +23,9 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.opera_detail--roles_text {
+  margin-top: 0px;
+}
 .opera_detail--opera_roles {
+  margin-top: 0px;
 }
