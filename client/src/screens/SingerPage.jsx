@@ -28,11 +28,12 @@ export default function SingerPage(props) {
     //   const blogsArray = await getAllUserBlogs(currentUser.id);
     //   setDelayBlog(blogsArray);
     // }
-
+if(currentUser){
     fetchRoles();
     fetchBlogs();
+}
     // fetchBlogsLater()
-  }, [])
+  }, [currentUser])
 
 
   // const runDelayBlogs() => {
@@ -42,7 +43,7 @@ export default function SingerPage(props) {
   // }
 
   console.log('blogs', blogs)
-  console.log('delay blogs', delayBlog)
+  // console.log('delay blogs', delayBlog)
   // console.log( currentUser.id )
   
   return (
@@ -57,10 +58,13 @@ export default function SingerPage(props) {
       </>
       }
       {
-        delayBlog !== [] &&
+        blogs.length ?
         <>
-        
-          </>
+        {blogs.map(blog => (
+          <p>{blog.title}</p>
+         ))}
+          </> :
+          <><p>...Loading</p></>
           
       }
     </div>

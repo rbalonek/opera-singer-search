@@ -44,7 +44,7 @@ export default function MainContainer(props) {
     fetchOperas();
     fetchRoles();
     fetchSingers();
-    fetchBlogs();
+    // fetchBlogs();
   }, [])
 
   const updateSubmit = async (id, formData) => {
