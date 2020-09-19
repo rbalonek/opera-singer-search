@@ -21,6 +21,7 @@ export default function Singers(props) {
                 src={singer.user_img}
                 alt={singer.username}
               />
+              <p className="singer_card--voice_type">{singer.voice_type}</p>
               <Link to={`/singers/${singer.id}`}>
                 <p>View Roles ></p>
               </Link>
