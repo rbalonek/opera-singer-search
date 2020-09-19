@@ -1,0 +1,27 @@
+.opera_detail_container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.opera_detail--opera_name {
+  align-self: center;
+}
+
+.opera_detail--opera_img {
+  align-self: center;
+  height: 300px;
+  width: 300px;
+}
+
+.opera_detail--opera_composer {
+  /* align-self: center; */
+}
+
+.opera_detail--opera_roles--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.opera_detail--opera_roles {
+}

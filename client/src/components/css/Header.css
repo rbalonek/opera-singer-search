@@ -1,0 +1,56 @@
+Header {
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.5);
+  height: 250px;
+}
+.header--nrt_title {
+  font-family: marzo-w00-regular, fantasy;
+  font-size: 50px;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.header--nrt_name {
+  font-family: marzo-w00-regular, fantasy;
+  font-size: 25px;
+  position: relative;
+  margin-top: -20px;
+}
+.header--search_operas {
+  /* width: 100px; */
+}
+
+.header--search_singers {
+  /* position: relative;
+  text-align: right;
+  top: -40px; */
+}
+
+.header--current_username {
+  /* width: 200px;
+  text-align: center;
+  position: relative;
+  top: -80px; */
+}
+
+.header--current_user_div {
+  /* position: relative;
+  text-align: center; */
+}
+
+.header--logout_button {
+  float: right;
+  position: relative;
+  top: -70px;
+}
+
+.header--login_register_button {
+  /* position: relative;
+  top: -40px; */
+}
+
+.header--my_page {
+  float: right;
+  position: relative;
+  bottom: 30px;
+}

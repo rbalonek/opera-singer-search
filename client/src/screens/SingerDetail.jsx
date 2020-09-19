@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { showRolesForUser } from "../services/roles";
 import { getOneUser } from "../services/users";
+import "./css/SingerDetail.css";
 
 export default function SingerDetail(props) {
   const [singer, setSinger] = useState(null);
@@ -28,25 +29,41 @@ export default function SingerDetail(props) {
     fetchRoles();
   }, []);
 
-  // console.log(performedRoles)
+  console.log(roles);
   return (
     <div>
-      <h1>Singer</h1>
       {singer && (
         <>
-          <h3>{singer.username}</h3>
-          <img src={singer.user_img} alt={singer.username} />
+          <div className="singer_detail--header">
+            <img
+              className="singer_detail--header--img"
+              src={singer.user_img}
+              alt={singer.username}
+            />
+            <h1 className="singer_detail--header--username">
+              {singer.username}
+            </h1>
+            <h3 className="singer_detail--header--voice_type">
+              {singer.voice_type}
+            </h3>
+          </div>
+          <div>
+            <p>Website: {singer.website}</p>
+            <p>City: {singer.city}</p>
+            <p>Bio: {singer.bio}</p>
+          </div>
         </>
       )}
-      {performedRoles &&
+      {performedRoles && (
         <>
-        {performedRoles.map(performedRole => (
-          <p>{performedRole.name}</p>
-         ))}
+          <div className="roles_performed--container">
+            <h3>Roles</h3>
+            {performedRoles.map((performedRole) => (
+              <p>{performedRole.name}</p>
+            ))}
+          </div>
         </>
-      }
-      
-      
+      )}
     </div>
   );
 }

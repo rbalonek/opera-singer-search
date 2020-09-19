@@ -26,7 +26,6 @@ export default function OperaDetail(props) {
 
   return (
     <div>
-      <h1>Opera Detail!</h1>
       <div className="opera_detail_container">
         {opera && (
           <>

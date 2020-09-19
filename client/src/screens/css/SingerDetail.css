@@ -1,0 +1,28 @@
+.singer_detail--header {
+  width: 100%;
+  display: flex;
+}
+.singer_detail--header--img {
+  height: 300px;
+  width: auto;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.singer_detail--header--username {
+  font-size: 50px;
+  position: relative;
+  top: -40px;
+}
+
+.singer_detail--header--voice_type {
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  left: -260px;
+}
+.roles_performed--container {
+  position: relative;
+  float: right;
+  right: 300px;
+  bottom: 300px;
+}
