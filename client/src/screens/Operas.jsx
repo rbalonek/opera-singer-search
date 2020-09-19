@@ -11,13 +11,14 @@ export default function Operas(props) {
         {operas.map((opera) => (
           <>
             <div className="opera_card">
-              <p className="opera_card--composer">{opera.composer}</p>
+              <p className="opera_card--name">{opera.name}</p>
               <img
                 className="opera_card--img"
                 src={opera.composer_img}
                 alt={opera.composer}
               />
-              <p className="opera_card--name">{opera.name}</p>
+
+              <p className="opera_card--composer">{opera.composer}</p>
               <Link to={`/operas/${opera.id}`}>
                 <p className="opera_card--view_roles">View Roles ></p>
               </Link>

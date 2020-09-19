@@ -4,7 +4,7 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: white;
+  color: rgb(158, 48, 48);
 }
 
 .opera_card_container {
