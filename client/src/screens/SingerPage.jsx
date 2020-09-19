@@ -70,7 +70,6 @@ export default function SingerPage(props) {
           {blogs.map((blog) => (
             <p>{blog.title}</p>
           ))}
-          <p>Loading...</p>
         </>
       )}
     </div>

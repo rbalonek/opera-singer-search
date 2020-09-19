@@ -14,11 +14,19 @@ class BlogsController < ApplicationController
     render json: @blog
   end
 
+
+
   # ##Show all blogs for user
   def blogs_for_user
-    @blogs = Blog.find(params[:id])
+    @blogs = Blog.where(user_id: params[:id]) ##Getting all Blogs from user_id
+    
     render json: @blogs
   end
+
+
+
+
+
 
   # POST /blogs
   def create
