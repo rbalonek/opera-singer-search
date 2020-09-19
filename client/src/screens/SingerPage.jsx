@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getAllBlogs, getAllUserBlogs } from "../services/blogs";
 import { showRolesForUser } from "../services/roles";
+import "./css/SingerPage.css";
 
 export default function SingerPage(props) {
   const [roles, setRoles] = useState([]);
@@ -47,14 +48,20 @@ export default function SingerPage(props) {
   return (
     <div>
       <h1>SINGER PAGE</h1>
-      <p>Name : {currentUser.username}</p>
-      <img src={currentUser.user_img} alt={currentUser.username} />
-      <p>Bio : {currentUser.bio}</p>
+      <p className="singer_page--username">Name : {currentUser.username}</p>
+      <img
+        className="singer_page--img"
+        src={currentUser.user_img}
+        alt={currentUser.username}
+      />
+      <p className="singer_page--bio">Bio : {currentUser.bio}</p>
       {currentUser && (
         <>
           <Link to="/singer_page/create_blog">
             {" "}
-            <button>Create Blog</button>{" "}
+            <button className="singer_page--create_blog">
+              Create Blog
+            </button>{" "}
           </Link>
         </>
       )}
