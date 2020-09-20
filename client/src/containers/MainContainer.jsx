@@ -4,6 +4,7 @@ import CreateRecentPerformances from "../screens/CreateRecentPerformances";
 import EditRecentPerformances from "../screens/EditRecentPerformances";
 import OperaDetail from "../screens/OperaDetail";
 import Operas from "../screens/Operas";
+import RecentPerformanceDetail from "../screens/RecentPerformanceDetail";
 import RoleDetail from "../screens/RoleDetail";
 import SingerDetail from "../screens/SingerDetail";
 import SingerPage from "../screens/SingerPage";
@@ -96,6 +97,13 @@ export default function MainContainer(props) {
 
       <Route path="/singers">
         <Singers singers={singers} currentUser={currentUser} />
+      </Route>
+
+      <Route path="/BlogDetail/:id">
+        <RecentPerformanceDetail
+          currentUser={currentUser}
+          createSubmit={createSubmit}
+        />
       </Route>
 
       <Route path="/singer_page/:id/edit_blog">

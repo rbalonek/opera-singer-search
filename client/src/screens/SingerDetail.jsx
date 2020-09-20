@@ -78,7 +78,7 @@ export default function SingerDetail(props) {
           <React.Fragment>
             {blogs.map((blog) => (
               <div className="singer_detail_blog--container">
-                <Link to={"/BlogDetail"}>
+                <Link to={`/BlogDetail/${blog.id}`}>
                   {" "}
                   <p className="singer_detail_blog--title">{blog.title}</p>{" "}
                 </Link>

@@ -12,7 +12,7 @@
 
 # # ##Users
 # # Admin = User.create!(username: "Admin" , user_img: "https://static.wixstatic.com/media/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.jpg/v1/fill/w_495,h_330,al_c,q_80,usm_0.66_1.00_0.01/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.webp", bio:"bio 1", email: "admin@admin.com", password:"123456" )
-# # Bob1 = User.create!(username: "Bob1" , user_img: "https://static.wixstatic.com/media/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.jpg/v1/fill/w_495,h_330,al_c,q_80,usm_0.66_1.00_0.01/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.webp", bio:"bio 2", email: "bob@bob.com", password:"123456" )
+Bob1 = User.create!(username: "Bob1" , user_img: "https://static.wixstatic.com/media/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.jpg/v1/fill/w_495,h_330,al_c,q_80,usm_0.66_1.00_0.01/a2b5bb_43cc0aa512b8b03f331730a9e04bdc1d.webp", bio:"bio 2", email: "bob@bob.com", password:"123456", website:"www.bob.com", city:"NYC",voice_type:"baritone" )
 
 # # # ### CARMEN
 # # # ##OPERA
@@ -121,7 +121,7 @@
 
 # Blog1 = Blog.create!(title: "Onegin" , opera_company: "company", date: "dates", img:"sdkjhasd", text:"text", user_id: 1)
 
-# puts "#{Role.count} Roles created"
-# puts "#{Opera.count} Operas created"
-# puts "#{User.count} Users created"
-# puts "#{Blog.count} Blogs created"
+puts "#{Role.count} Roles created"
+puts "#{Opera.count} Operas created"
+puts "#{User.count} Users created"
+puts "#{Blog.count} Blogs created"
