@@ -76,7 +76,6 @@ export default function EditRecentPerformances(props) {
       </label>
       <br />
       <button>Submit</button>
-      <button onClick={() => props.handleDelete(3)}>Delete</button>
     </form>
   );
 }

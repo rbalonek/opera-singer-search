@@ -68,6 +68,7 @@ export default function MainContainer(props) {
   const handleDelete = async (id) => {
     await deleteBlog(id);
     setBlogs((prevState) => prevState.filter((blog) => blog.id !== id));
+    history.push("/");
   };
 
   // console.log(blogs)
