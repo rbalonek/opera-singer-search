@@ -8,6 +8,7 @@ class OperasController < ApplicationController
     render json: @operas
   end
 
+###CUSTOM SEARCH BY NAME
   def search 
     @opera = Opera.find_by(name: params[:name]) 
     render json: @opera

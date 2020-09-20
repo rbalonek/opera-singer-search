@@ -1,0 +1,29 @@
+.blog--container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.blog--container--left {
+  width: 60%;
+  contain: content;
+}
+.blog--container--right {
+  width: 40%;
+  contain: content;
+  text-align: center;
+  background-color: #f2f2f3;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  font-family: ui-monospace;
+}
+.blog--title {
+}
+.blog--company {
+}
+.blog--text {
+}
+.blog--date {
+}
+.blog--img {
+  height: 100%;
+  width: 100%;
+}
