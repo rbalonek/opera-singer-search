@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { getAllUserBlogs } from "../services/blogs";
 import { showRolesForUser } from "../services/roles";
 import { getOneUser } from "../services/users";
 import "./css/SingerDetail.css";
@@ -10,26 +12,28 @@ export default function SingerDetail(props) {
 
   const [roles, setRoles] = useState([]);
   const [performedRoles, setPerformedRoles] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     const fetchSinger = async () => {
       const singleSinger = await getOneUser(id);
-      // console.log(singleSinger)
       setSinger(singleSinger);
     };
     const fetchRoles = async () => {
       const rolesArray = await showRolesForUser(id);
       setRoles(rolesArray);
       setPerformedRoles(rolesArray.roles);
-      // console.log("roles array", rolesArray.roles[0].name);
-      // console.log(performedRoles)
-      // console.log(roles)
+    };
+    const fetchBlogs = async () => {
+      const blogsArray = await getAllUserBlogs(id);
+      setBlogs(blogsArray);
     };
     fetchSinger();
     fetchRoles();
+    fetchBlogs();
   }, []);
 
-  console.log(roles);
+  // console.log(blogs);
   return (
     <div>
       {singer && (
@@ -59,15 +63,31 @@ export default function SingerDetail(props) {
           <div className="roles_performed--container">
             <h3>Roles</h3>
             {performedRoles.map((performedRole) => (
-              <p>{performedRole.name}</p>
+              <div>
+                <p>
+                  {performedRole.name} - {performedRole.opera.name} -{" "}
+                  {performedRole.opera.composer}
+                </p>
+              </div>
             ))}
           </div>
+        </>
+      )}
+      {blogs && (
+        <>
+          <React.Fragment>
+            {blogs.map((blog) => (
+              <div className="singer_detail_blog--container">
+                <Link to={"/BlogDetail"}>
+                  {" "}
+                  <p className="singer_detail_blog--title">{blog.title}</p>{" "}
+                </Link>
+                <img className="singer_detail_blog--img" src={blog.img}></img>
+              </div>
+            ))}
+          </React.Fragment>
         </>
       )}
     </div>
   );
 }
-
-// {performedRoles.map(performedRole => (
-//   <p>{performedRole.name}</p>
-//  ))}

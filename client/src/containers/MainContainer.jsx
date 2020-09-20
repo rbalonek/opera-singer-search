@@ -41,13 +41,13 @@ export default function MainContainer(props) {
       setSingers(singerArray);
     };
     const fetchBlogs = async () => {
-      const blogArray = await getAllUserBlogs();
+      const blogArray = await getAllBlogs();
       setBlogs(blogArray);
     };
     fetchOperas();
     fetchRoles();
     fetchSingers();
-    // fetchBlogs();
+    fetchBlogs();
   }, []);
 
   const updateSubmit = async (id, formData) => {
@@ -73,13 +73,6 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path="/singer_page/create_blog">
-        <CreateRecentPerformances
-          currentUser={currentUser}
-          createSubmit={createSubmit}
-        />
-      </Route>
-
       <Route path="/singers/:id">
         <SingerDetail />
       </Route>
@@ -108,8 +101,16 @@ export default function MainContainer(props) {
       <Route path="/singer_page/:id/edit_blog">
         <EditRecentPerformances
           currentUser={currentUser}
-          createSubmit={createSubmit}
+          updateSubmit={updateSubmit}
           blogs={blogs}
+          handleDelete={handleDelete}
+        />
+      </Route>
+
+      <Route path="/singer_page/create_blog">
+        <CreateRecentPerformances
+          currentUser={currentUser}
+          createSubmit={createSubmit}
         />
       </Route>
 

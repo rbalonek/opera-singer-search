@@ -26,3 +26,19 @@
   right: 300px;
   bottom: 300px;
 }
+
+.singer_detail_blog--container {
+  background-color: rgb(242, 199, 109);
+  height: 200px;
+  width: 250px;
+  text-align: center;
+  border-radius: 20%;
+  margin: 5px;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.singer_detail_blog--title {
+}
+.singer_detail_blog--img {
+  height: 100px;
+  width: auto;
+}

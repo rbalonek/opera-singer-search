@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getAllBlogs, getAllUserBlogs } from "../services/blogs";
+import { getAllUserBlogs } from "../services/blogs";
 import { showRolesForUser } from "../services/roles";
 import "./css/SingerPage.css";
 
 export default function SingerPage(props) {
   const [roles, setRoles] = useState([]);
-  // const [blogs, setBlogs] = useState([])
-  // const [delayBlog, setDelayBlog] = useState([])
-  const { currentUser } = props;
-  // const { blogs } = props.blogs;
+  const { currentUser, handleDelete } = props;
 
   const [blogs, setBlogs] = useState([]);
-  const [delayBlog, setDelayBlog] = useState([]);
 
   useEffect(() => {
     const fetchRoles = async () => {
@@ -23,27 +19,13 @@ export default function SingerPage(props) {
       const blogsArray = await getAllUserBlogs(currentUser.id);
       setBlogs(blogsArray);
     };
-
-    // const fetchBlogsLater = async () => {
-    //   const blogsArray = await getAllUserBlogs(currentUser.id);
-    //   setDelayBlog(blogsArray);
-    // }
     if (currentUser) {
       fetchRoles();
       fetchBlogs();
     }
-    // fetchBlogsLater()
   }, [currentUser]);
 
-  // const runDelayBlogs() => {
-  //   {delayBlog.map(blog => (
-  //     <p>{blog.title}</p>
-  //    ))}
-  // }
-
   console.log("blogs", blogs);
-  // console.log('delay blogs', delayBlog)
-  // console.log( currentUser.id )
 
   return (
     <div>
@@ -66,18 +48,22 @@ export default function SingerPage(props) {
         </>
       )}
       {blogs.length && (
-        <>
+        <React.Fragment>
           {blogs.map((blog) => (
-            <p>{blog.title}</p>
+            <div>
+              <Link to={`/singer_page/${blog.id}/edit_blog`}>
+                {" "}
+                <p>{blog.title}</p>{" "}
+              </Link>
+              <h3>{blog.id}</h3>
+              <button onClick={() => props.handleDelete(blog.id)}>
+                Delete
+              </button>
+            </div>
           ))}
-        </>
+        </React.Fragment>
       )}
     </div>
   );
 }
-// blogs.length ?
-//         <>
-// {blogs.map(blog => (
-//   <p>{blog.title}</p>
-//  ))}
-// </> :
+//<button onClick={() => props.handleDelete(blog.id)}>Delete</button>
