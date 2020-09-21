@@ -52,14 +52,15 @@ export default function SingerDetail(props) {
               </h1>
             </div>
           </div>
-          <div>
+          <div className="singer_detail-map_container">
             {performedRoles && (
               <>
                 <div className="singer_detail--web_city_bio">
                   <p>Website: {singer.website}</p>
                   <p>City: {singer.city}</p>
+                  <p>Bio: {singer.bio}</p>
                 </div>
-                <p>Bio: {singer.bio}</p>
+
                 <div className="roles_performed--container">
                   <h3 className="roles_performed--title">Roles</h3>
                   {performedRoles.map((performedRole) => (

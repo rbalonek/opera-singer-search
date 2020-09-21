@@ -66,3 +66,79 @@
   height: 100px;
   width: auto;
 }
+
+@media (max-width: 500px) {
+  .singer_detail--header--img {
+    height: 100px;
+    width: auto;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+  .singer_detail--header--username_container {
+    position: relative;
+    top: -10px;
+    min-width: fit-content;
+    margin-left: 10px;
+  }
+  .singer_detail--header--username {
+    font-size: 6vw;
+  }
+
+  .singer_detail-map_container {
+    text-align: -webkit-center;
+  }
+  /* text-align: -webkit-center; */
+
+  .roles_performed--container {
+    width: 50%;
+    position: relative;
+    background-color: whitesmoke;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    min-width: fit-content;
+  }
+
+  .roles_performed--container:hover {
+    transform: scale(2);
+  }
+
+  .roles_performed--title {
+  }
+
+  .roles_performed--map_div {
+    display: flex;
+    justify-content: center;
+  }
+  .roles_performed--roles {
+    font-size: 1.5vw;
+  }
+
+  .singer_detail--web_city_bio {
+    position: relative;
+    min-width: fit-content;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .all_blogs--container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .singer_detail_blog--container {
+    background-color: rgb(242, 199, 109);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 20%;
+    margin: 5px;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+  .singer_detail_blog--title {
+  }
+  .singer_detail_blog--img {
+    height: 50px;
+    width: auto;
+    border-radius: 20%;
+  }
+}
