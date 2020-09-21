@@ -8,7 +8,7 @@ require "faker"
 # # # # # #   Character.create(name: 'Luke', movie: movies.first)
 # Opera.destroy_all
 # Role.destroy_all
-# Blog.destroy_all
+Blog.destroy_all
 # User.destroy_all
 
 # # # # # ##Users
@@ -182,14 +182,25 @@ require "faker"
 
 
 # ###BLOGS
-60.times do 
+50.times do 
   Blog.create!(
-    title:Faker::Superhero.name  , 
+    title:Faker::Name.first_name, 
     opera_company: Faker::Company.name , 
     date:Faker::Date.backward(days: 1000), 
     img: Faker::Avatar.image  , 
     text: Faker::Quote.most_interesting_man_in_the_world,
-    user_id:Faker::Number.between(from: 41, to: 80) ,
+    user_id:Faker::Number.between(from: 41, to: 61) ,
+  )
+end
+
+50.times do 
+  Blog.create!(
+    title:Faker::Name.first_name, 
+    opera_company: Faker::Company.name , 
+    date:Faker::Date.backward(days: 1000), 
+    img: Faker::Avatar.image  , 
+    text: Faker::Quote.famous_last_words,
+    user_id:Faker::Number.between(from: 61, to: 80) ,
   )
 end
 
