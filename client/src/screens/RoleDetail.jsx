@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { addRole, getOneRole } from "../services/roles";
 import "./css/RoleDetail.css";
 
@@ -8,6 +7,7 @@ export default function RoleDetail(props) {
   const [role, setRole] = useState({});
   const [users, setUsers] = useState([]);
   const { id } = useParams();
+  const history = useHistory();
   // const { currentUser } = props;
 
   useEffect(() => {
@@ -24,6 +24,7 @@ export default function RoleDetail(props) {
   const handleClick = async () => {
     const newRole = await addRole(id);
     setRole(newRole);
+    history.push("/singer_page/");
   };
 
   // console.log("users", users);

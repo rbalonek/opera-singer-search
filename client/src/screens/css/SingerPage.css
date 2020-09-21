@@ -1,3 +1,6 @@
+.singer_page--container {
+  text-align: -webkit-center;
+}
 .singer_page--username {
 }
 
@@ -9,12 +12,37 @@
 .singer_page--bio {
 }
 
+.singer_page_roles_performed--container {
+  width: 50%;
+  position: relative;
+  /* top: 100px; */
+  /* left: -200px; */
+  background-color: whitesmoke;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  min-width: fit-content;
+  margin-bottom: 20px;
+}
+
+.singer_page_roles_performed--title {
+}
+
+.singer_page_roles_performed--map_div {
+  display: flex;
+  justify-content: center;
+}
+.singer_page_roles_performed--roles {
+  font-size: 1.5vw;
+}
+
 .singer_page--create_blog {
 }
 
-.outside {
+.singer_page_blog--organizer {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-around;
 }
 
 .singer_page_blog--container {
