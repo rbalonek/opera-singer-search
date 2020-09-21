@@ -54,3 +54,30 @@ Header {
   position: relative;
   bottom: 30px;
 }
+
+/* iPhone 5/SE */
+@media (max-width: 500px) {
+  .header--search_operas {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header--search_singers {
+    text-align: center;
+  }
+  .header--current_user_div {
+    position: relative;
+    text-align: center;
+  }
+  .header--logout_button {
+    float: right;
+    position: relative;
+    top: -10px;
+  }
+
+  .header--my_page {
+    float: left;
+    position: relative;
+    bottom: 30px;
+  }
+}
