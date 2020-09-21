@@ -1,0 +1,28 @@
+.role-name {
+  text-align: center;
+}
+
+.user_card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.user_info--container {
+  background-color: #f4d35e;
+  height: 200px;
+  width: 250px;
+  text-align: center;
+  border-radius: 20%;
+  margin: 5px;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.user_info--name {
+}
+
+.user_info--img {
+  height: 100px;
+  width: auto;
+}

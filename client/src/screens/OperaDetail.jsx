@@ -29,19 +29,21 @@ export default function OperaDetail(props) {
       <div className="opera_detail_container">
         {opera && (
           <>
-            <h3 className="opera_detail--opera_name">{opera.name}</h3>
             <img
               className="opera_detail--opera_img"
               src={opera.composer_img}
               alt={opera.composer}
             />
+            <h1 className="opera_detail--opera_name">{opera.name}</h1>
             <h3 className="opera_detail--opera_composer">{opera.composer}</h3>
             <h2 className="opera_detail--roles_text">Roles:</h2>
             <div className="opera_detail--opera_roles--container">
               {roles.map((role) => (
                 <Link to={`/roles/${role.id}`}>
                   {" "}
-                  <p className="opera_detail--opera_roles">{role.name}</p>
+                  <div className="opera_detail--opera_role--single">
+                    <p className="opera_detail--opera_roles">{role.name}</p>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { addRole, getOneRole } from "../services/roles";
+import "./css/RoleDetail.css";
 
 export default function RoleDetail(props) {
   const [role, setRole] = useState({});
@@ -25,27 +26,31 @@ export default function RoleDetail(props) {
     setRole(newRole);
   };
 
-  // console.log('users', users)
+  // console.log("users", users);
+  console.log("role", role.opera);
 
   return (
     <div>
-      <h1>ROLE DETAIL</h1>
-
-      <>
-        <h3>{role.name}</h3>
-      </>
       {props.currentUser && (
         <>
           <button onClick={handleClick}>Add to My Roles</button>
         </>
       )}
-      <h1>All Singers</h1>
+      <h1 className="role-name">All Singers - {role.name}</h1>
       <>
         {role && (
           <>
-            {users.map((user) => (
-             <Link to={`/singers/${user.id}`}> <p>{user.username}</p> </Link>
-            ))}
+            <div className="user_card_container">
+              {users.map((user) => (
+                <div className="user_info--container">
+                  <Link to={`/singers/${user.id}`}>
+                    {" "}
+                    <p className="user_info--name">{user.username}</p>{" "}
+                  </Link>
+                  <img className="user_info--img" src={user.user_img}></img>
+                </div>
+              ))}
+            </div>
           </>
         )}
       </>
