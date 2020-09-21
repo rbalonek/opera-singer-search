@@ -16,8 +16,9 @@ User.destroy_all
 
 # # # # # ### CARMEN
 # # # # # ##OPERA
-# carmen = Opera.create!(name: 'Carmen', composer: 'George Bizet', era: 'Classical', composer_img:'https://www.gstatic.com/tv/thumb/persons/476943/476943_v9_ba.jpg' )
+carmen = Opera.create!(name: 'Carmen', composer: 'George Bizet', era: 'Classical', composer_img:'https://www.gstatic.com/tv/thumb/persons/476943/476943_v9_ba.jpg' )
 
+#
 # # # # # ##ROLES
 carmen = Role.create!(name: "Carmen" , opera_id: 1, opera:carmen)
 escamillo = Role.create!(name: "Escamillo" , opera_id: 1, opera:carmen)
