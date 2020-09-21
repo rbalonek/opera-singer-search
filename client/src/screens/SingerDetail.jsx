@@ -44,11 +44,13 @@ export default function SingerDetail(props) {
               src={singer.user_img}
               alt={singer.username}
             />
-            <h1 className="singer_detail--header--username">
-              {singer.username}
-              <br />
-              {singer.voice_type}
-            </h1>
+            <div className="singer_detail--header--username_container">
+              <h1 className="singer_detail--header--username">
+                {singer.username}
+                <br />
+                {singer.voice_type}
+              </h1>
+            </div>
           </div>
           <div>
             {performedRoles && (

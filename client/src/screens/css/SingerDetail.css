@@ -9,24 +9,19 @@
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
-.singer_detail--header--username {
-  font-size: 4vw;
+.singer_detail--header--username_container {
   position: relative;
   top: -40px;
   min-width: fit-content;
+  margin-left: 20px;
+}
+.singer_detail--header--username {
+  font-size: 4vw;
 }
 
-.singer_detail--header--voice_type {
-  font-size: 30px;
-  position: relative;
-  top: 10px;
-  left: -145px;
-}
 .roles_performed--container {
   width: 50%;
   position: relative;
-  /* top: 100px; */
-  /* left: -200px; */
   background-color: whitesmoke;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -45,10 +40,10 @@
 
 .singer_detail--web_city_bio {
   position: relative;
-  /* top: 100px;
-  left: -255px; */
   min-width: fit-content;
   font-size: 2vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .all_blogs--container {
