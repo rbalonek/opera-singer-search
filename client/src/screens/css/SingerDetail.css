@@ -133,11 +133,12 @@
     border-radius: 20%;
     margin: 5px;
     box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    contain: content;
   }
   .singer_detail_blog--title {
   }
   .singer_detail_blog--img {
-    height: 50px;
+    height: 40px;
     width: auto;
     border-radius: 20%;
   }
