@@ -46,45 +46,58 @@ export default function SingerDetail(props) {
             />
             <h1 className="singer_detail--header--username">
               {singer.username}
-            </h1>
-            <h3 className="singer_detail--header--voice_type">
+              <br />
               {singer.voice_type}
-            </h3>
+            </h1>
           </div>
           <div>
-            <p>Website: {singer.website}</p>
-            <p>City: {singer.city}</p>
-            <p>Bio: {singer.bio}</p>
+            {performedRoles && (
+              <>
+                <div className="singer_detail--web_city_bio">
+                  <p>Website: {singer.website}</p>
+                  <p>City: {singer.city}</p>
+                </div>
+                <p>Bio: {singer.bio}</p>
+                <div className="roles_performed--container">
+                  <h3 className="roles_performed--title">Roles</h3>
+                  {performedRoles.map((performedRole) => (
+                    <div className="roles_performed--map_div">
+                      <p className="roles_performed--roles">
+                        {performedRole.name}-
+                      </p>
+                      <p className="roles_performed--roles">
+                        {" "}
+                        {performedRole.opera.name}-
+                      </p>
+                      <p className="roles_performed--roles">
+                        {performedRole.opera.composer}
+                      </p>
+                      <br />
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </>
       )}
-      {performedRoles && (
-        <>
-          <div className="roles_performed--container">
-            <h3>Roles</h3>
-            {performedRoles.map((performedRole) => (
-              <div>
-                <p>
-                  {performedRole.name} - {performedRole.opera.name} -{" "}
-                  {performedRole.opera.composer}
-                </p>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+
       {blogs && (
         <>
           <React.Fragment>
-            {blogs.map((blog) => (
-              <div className="singer_detail_blog--container">
-                <Link to={`/BlogDetail/${blog.id}`}>
-                  {" "}
-                  <p className="singer_detail_blog--title">{blog.title}</p>{" "}
-                </Link>
-                <img className="singer_detail_blog--img" src={blog.img}></img>
-              </div>
-            ))}
+            <div className="all_blogs--container">
+              {blogs.map((blog) => (
+                <div className="singer_detail_blog--container">
+                  <Link to={`/BlogDetail/${blog.id}`}>
+                    {" "}
+                    <p className="singer_detail_blog--title">
+                      {blog.title}
+                    </p>{" "}
+                  </Link>
+                  <img className="singer_detail_blog--img" src={blog.img}></img>
+                </div>
+              ))}
+            </div>
           </React.Fragment>
         </>
       )}

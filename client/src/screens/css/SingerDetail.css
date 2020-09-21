@@ -4,6 +4,7 @@
 }
 .singer_detail--header--img {
   height: 300px;
+  /* width: 100px; */
   width: auto;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
 }
@@ -12,19 +13,47 @@
   font-size: 50px;
   position: relative;
   top: -40px;
+  min-width: fit-content;
 }
 
 .singer_detail--header--voice_type {
   font-size: 30px;
   position: relative;
   top: 10px;
-  left: -260px;
+  left: -145px;
 }
 .roles_performed--container {
+  width: 50%;
   position: relative;
-  float: right;
-  right: 300px;
-  bottom: 300px;
+  /* top: 100px; */
+  /* left: -200px; */
+  background-color: whitesmoke;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  min-width: fit-content;
+}
+
+.roles_performed--title {
+}
+
+.roles_performed--map_div {
+  display: flex;
+}
+.roles_performed--roles {
+  font-size: 1.5vw;
+}
+
+.singer_detail--web_city_bio {
+  position: relative;
+  /* top: 100px;
+  left: -255px; */
+  min-width: fit-content;
+  font-size: 2vw;
+}
+
+.all_blogs--container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .singer_detail_blog--container {
