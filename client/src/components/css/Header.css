@@ -102,7 +102,7 @@ Header {
     top: -50px;
   }
   .header--my_page {
-    float: right;
+    float: left;
     position: relative;
     bottom: 50px;
   }
