@@ -69,3 +69,34 @@
   bottom: -15px;
   right: 0px;
 }
+
+/* Cell Phones */
+@media (max-width: 500px) {
+  .singer_page_roles_performed--container:hover {
+    transform: scale(2);
+  }
+  .singer_page_blog--container {
+    background-color: rgb(242, 199, 109);
+    height: 130px;
+    width: 100px;
+    text-align: center;
+    border-radius: 20%;
+    margin: 5px;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  .singer_page_blog--title {
+  }
+  .singer_page_blog--img {
+    height: 40px;
+    width: 50%;
+    align-self: center;
+    border-radius: 20%;
+  }
+  .singer_page_blog--delete {
+    position: relative;
+    bottom: -15px;
+    right: 0px;
+  }
+}

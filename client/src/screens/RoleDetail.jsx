@@ -34,7 +34,9 @@ export default function RoleDetail(props) {
     <div>
       {props.currentUser && (
         <>
-          <button onClick={handleClick}>Add to My Roles</button>
+          <div className="add_to_roles_button">
+            <button onClick={handleClick}>Add to My Roles</button>
+          </div>
         </>
       )}
       <h1 className="role-name">All Singers - {role.name}</h1>
