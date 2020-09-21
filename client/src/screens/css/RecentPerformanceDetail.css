@@ -27,3 +27,30 @@
   height: 100%;
   width: 100%;
 }
+
+@media (max-width: 500px) {
+  .blog--container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    float: left;
+  }
+  .blog--container--left {
+    width: 100%;
+    contain: content;
+  }
+  .blog--container--right {
+    width: 100%;
+    contain: content;
+    text-align: center;
+    background-color: #f2f2f3;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    font-family: ui-monospace;
+  }
+
+  .blog--img {
+    height: 100%;
+    width: 100%;
+  }
+}
