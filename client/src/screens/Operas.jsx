@@ -7,6 +7,7 @@ export default function Operas(props) {
   return (
     <div>
       <h3>Operas</h3>
+
       <div className="opera_card_container">
         {operas.map((opera) => (
           <>

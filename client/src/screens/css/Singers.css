@@ -1,6 +1,7 @@
 .singer_card_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .singer_card {
@@ -11,6 +12,7 @@
   border-radius: 20%;
   margin: 5px;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
 }
 
 .singer_card--img {

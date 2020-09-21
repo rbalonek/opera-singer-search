@@ -10,16 +10,19 @@ a:active {
 .opera_card_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .opera_card {
-  background-color: rgb(242, 199, 109);
+  /* background-color: rgb(242, 199, 109); */
+  background-color: #f4d35e;
   height: 200px;
   width: 250px;
   text-align: center;
   border-radius: 20%;
   margin: 5px;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 .opera_card--composer {
