@@ -17,7 +17,7 @@ a:active {
   /* background-color: rgb(242, 199, 109); */
   background-color: #f4d35e;
   height: 200px;
-  width: 250px;
+  width: 150px;
   text-align: center;
   border-radius: 20%;
   margin: 5px;
@@ -35,6 +35,8 @@ a:active {
 }
 
 .opera_card--name {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .opera_card--view_roles {

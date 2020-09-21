@@ -55,7 +55,7 @@ Header {
   bottom: 30px;
 }
 
-/* iPhone 5/SE */
+/* Cell Phones */
 @media (max-width: 500px) {
   .header--search_operas {
     text-align: center;
