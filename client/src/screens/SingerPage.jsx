@@ -49,18 +49,22 @@ export default function SingerPage(props) {
       )}
       {blogs.length && (
         <React.Fragment>
-          {blogs.map((blog) => (
-            <div>
-              <Link to={`/singer_page/${blog.id}/edit_blog`}>
-                {" "}
-                <p>{blog.title}</p>{" "}
-              </Link>
-              <h3>{blog.id}</h3>
-              <button onClick={() => props.handleDelete(blog.id)}>
-                Delete
-              </button>
-            </div>
-          ))}
+          <div className="outside">
+            {blogs.map((blog) => (
+              <div className="singer_page_blog--container">
+                <Link to={`/singer_page/${blog.id}/edit_blog`}>
+                  {" "}
+                  <p>{blog.title}</p>{" "}
+                </Link>
+                <img className="singer_page_blog--img" src={blog.img}></img>
+                <div className="singer_page_blog--delete">
+                  <button onClick={() => props.handleDelete(blog.id)}>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </React.Fragment>
       )}
     </div>

@@ -10,7 +10,7 @@
 }
 
 .singer_detail--header--username {
-  font-size: 50px;
+  font-size: 4vw;
   position: relative;
   top: -40px;
   min-width: fit-content;

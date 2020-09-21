@@ -11,3 +11,33 @@
 
 .singer_page--create_blog {
 }
+
+.outside {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.singer_page_blog--container {
+  background-color: rgb(242, 199, 109);
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  border-radius: 20%;
+  margin: 5px;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+.singer_page_blog--title {
+}
+.singer_page_blog--img {
+  height: 100px;
+  width: 50%;
+  align-self: center;
+  border-radius: 20%;
+}
+.singer_page_blog--delete {
+  position: relative;
+  bottom: -15px;
+  right: 0px;
+}
