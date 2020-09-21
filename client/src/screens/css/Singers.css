@@ -23,3 +23,26 @@
 
 .singer_card--voice_type {
 }
+
+@media (max-width: 500px) {
+  .singer_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(242, 199, 109);
+    height: 200px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10%;
+    margin: 5px;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+  }
+
+  .singer_card--img {
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+    align-self: center;
+  }
+}
