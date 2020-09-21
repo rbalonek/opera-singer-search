@@ -143,3 +143,10 @@
     border-radius: 20%;
   }
 }
+
+/* My Phone */
+@media (max-width: 414px) {
+  .singer_detail_blog--container {
+    contain: content;
+  }
+}
