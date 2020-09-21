@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./css/EditRecentPerformances.css";
 
 export default function EditRecentPerformances(props) {
   const [formData, setFormData] = useState({
@@ -50,6 +51,7 @@ export default function EditRecentPerformances(props) {
         <input type="text" name="title" value={title} onChange={handleChange} />
       </label>
       <br />
+      <br />
       <label>
         Opera Company:
         <input
@@ -60,20 +62,31 @@ export default function EditRecentPerformances(props) {
         />
       </label>
       <br />
+      <br />
       <label>
         Performance Date(s):
         <input type="text" name="date" value={date} onChange={handleChange} />
       </label>
+      <br />
       <br />
       <label>
         Production Pic URL:
         <input type="text" name="img" value={img} onChange={handleChange} />
       </label>
       <br />
+      <br />
       <label>
         Description:
-        <input type="text" name="text" value={text} onChange={handleChange} />
+        <textarea
+          rows={5}
+          cols={35}
+          type="text"
+          name="text"
+          value={text}
+          onChange={handleChange}
+        />
       </label>
+      <br />
       <br />
       <button>Submit</button>
     </form>
