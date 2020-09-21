@@ -96,4 +96,14 @@ Header {
     position: relative;
     margin-top: -20px;
   }
+  .header--logout_button {
+    float: right;
+    position: relative;
+    top: -50px;
+  }
+  .header--my_page {
+    float: right;
+    position: relative;
+    bottom: 50px;
+  }
 }
