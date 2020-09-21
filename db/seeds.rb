@@ -20,15 +20,15 @@ carmen = Opera.create!(name: 'Carmen', composer: 'George Bizet', era: 'Classical
 
 #
 # # # # # ##ROLES
-carmen = Role.create!(name: "Carmen" , opera_id: 1, opera:carmen)
-escamillo = Role.create!(name: "Escamillo" , opera_id: 1, opera:carmen)
-Don_José = Role.create!(name: "Don José" , opera_id: 1, opera:carmen)
-Micaëla = Role.create!(name: "Micaëla" , opera_id: 1, opera:carmen)
-Zuniga = Role.create!(name: "Zuniga" , opera_id: 1, opera:carmen)
-Moralès = Role.create!(name: "Moralès" , opera_id: 1, opera:carmen)
-Frasquita = Role.create!(name: "Frasquita" , opera_id: 1, opera:carmen)
-Mercédès = Role.create!(name: "Mercédès" , opera_id: 1, opera:carmen)
-Lillas_Pastia = Role.create!(name: "LillasPastia" , opera_id: 1, opera:carmen)
+carmen = Role.create!(name: "Carmen" , opera:carmen)
+escamillo = Role.create!(name: "Escamillo" , opera:carmen)
+Don_José = Role.create!(name: "Don José" , opera:carmen)
+Micaëla = Role.create!(name: "Micaëla" , opera:carmen)
+Zuniga = Role.create!(name: "Zuniga" , opera:carmen)
+Moralès = Role.create!(name: "Moralès" , opera:carmen)
+Frasquita = Role.create!(name: "Frasquita" , opera:carmen)
+Mercédès = Role.create!(name: "Mercédès" ,  opera:carmen)
+Lillas_Pastia = Role.create!(name: "LillasPastia" ,  opera:carmen)
 
 # # # # # ### Boheme
 # # # # # ##OPERA
