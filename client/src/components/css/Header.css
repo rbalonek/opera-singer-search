@@ -55,6 +55,23 @@ Header {
   bottom: 30px;
 }
 
+/* My Phone */
+@media (max-width: 414px) {
+  .header--nrt_title {
+    font-family: marzo-w00-regular, fantasy;
+    font-size: 10px;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .header--nrt_name {
+    font-family: marzo-w00-regular, fantasy;
+    font-size: 10px;
+    position: relative;
+    margin-top: -20px;
+  }
+}
+
 /* Cell Phones */
 @media (max-width: 500px) {
   .header--search_operas {
