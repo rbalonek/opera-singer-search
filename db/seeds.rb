@@ -16,19 +16,19 @@ User.destroy_all
 
 # # # # # ### CARMEN
 # # # # # ##OPERA
-carmen = Opera.create!(name: 'Carmen', composer: 'George Bizet', era: 'Classical', composer_img:'https://www.gstatic.com/tv/thumb/persons/476943/476943_v9_ba.jpg' )
+@carmen = Opera.create!(name: 'Carmen', composer: 'George Bizet', era: 'Classical', composer_img:'https://www.gstatic.com/tv/thumb/persons/476943/476943_v9_ba.jpg' )
 
 #
 # # # # # ##ROLES
-carmen = Role.create!(name: "Carmen" , opera:carmen)
-escamillo = Role.create!(name: "Escamillo" , opera:carmen)
-Don_José = Role.create!(name: "Don José" , opera:carmen)
-Micaëla = Role.create!(name: "Micaëla" , opera:carmen)
-Zuniga = Role.create!(name: "Zuniga" , opera:carmen)
-Moralès = Role.create!(name: "Moralès" , opera:carmen)
-Frasquita = Role.create!(name: "Frasquita" , opera:carmen)
-Mercédès = Role.create!(name: "Mercédès" ,  opera:carmen)
-Lillas_Pastia = Role.create!(name: "LillasPastia" ,  opera:carmen)
+carmen = Role.create!(name: "Carmen" , opera: @carmen)
+escamillo = Role.create!(name: "Escamillo" , opera: @carmen)
+Don_José = Role.create!(name: "Don José" , opera: @carmen)
+Micaëla = Role.create!(name: "Micaëla" , opera: @carmen)
+Zuniga = Role.create!(name: "Zuniga" , opera: @carmen)
+Moralès = Role.create!(name: "Moralès" , opera: @carmen)
+Frasquita = Role.create!(name: "Frasquita" , opera: @carmen)
+Mercédès = Role.create!(name: "Mercédès" ,  opera: @carmen)
+Lillas_Pastia = Role.create!(name: "LillasPastia" ,  opera: @carmen)
 
 # # # # # ### Boheme
 # # # # # ##OPERA
