@@ -1,3 +1,6 @@
+.singer_detail--container {
+  text-align: -webkit-center;
+}
 .singer_detail--header {
   width: 100%;
   display: flex;
@@ -13,7 +16,7 @@
   position: relative;
   top: -40px;
   min-width: fit-content;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .singer_detail--header--username {
   font-size: 4vw;
@@ -33,6 +36,7 @@
 
 .roles_performed--map_div {
   display: flex;
+  justify-content: center;
 }
 .roles_performed--roles {
   font-size: 1.5vw;
@@ -52,7 +56,7 @@
 }
 
 .singer_detail_blog--container {
-  background-color: rgb(242, 199, 109);
+  background-color: #e2b275;
   height: 200px;
   width: 250px;
   text-align: center;
@@ -102,8 +106,13 @@
   }
 
   .roles_performed--title {
+    font-size: 3vw;
   }
 
+  .roles_performed--map_div {
+    display: flex;
+    justify-content: center;
+  }
   .roles_performed--map_div {
     display: flex;
     justify-content: center;
@@ -126,7 +135,7 @@
   }
 
   .singer_detail_blog--container {
-    background-color: rgb(242, 199, 109);
+    background-color: #e2b275;
     height: 100px;
     width: 100px;
     text-align: center;

@@ -35,7 +35,7 @@ export default function SingerDetail(props) {
 
   // console.log(blogs);
   return (
-    <div>
+    <div className="singer_detail--container">
       {singer && (
         <>
           <div className="singer_detail--header">
@@ -62,7 +62,7 @@ export default function SingerDetail(props) {
                 </div>
 
                 <div className="roles_performed--container">
-                  <h3 className="roles_performed--title">Roles</h3>
+                  <h2 className="roles_performed--title">Roles</h2>
                   {performedRoles.map((performedRole) => (
                     <div className="roles_performed--map_div">
                       <p className="roles_performed--roles">

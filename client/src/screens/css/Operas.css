@@ -1,10 +1,23 @@
 a,
 a:link,
 a:visited,
-a:hover,
 a:active {
   text-decoration: none;
-  color: rgb(158, 48, 48);
+  /* Theme 1 */
+  /* color: #000000; */
+  /* Theme 2 */
+  /* color: #e6d4a8; */
+  /* Theme 3 */
+  color: #84563c;
+}
+a:hover {
+  /* Theme 1 */
+  /* color: #cfa892; */
+  /* Theme 2 */
+  /* color: #924222; */
+  /* Theme 3 */
+  /* color: #9a2b49c4; */
+  color: #b12b27;
 }
 
 .opera_card_container {
@@ -14,15 +27,22 @@ a:active {
 }
 
 .opera_card {
-  /* background-color: rgb(242, 199, 109); */
-  background-color: #f4d35e;
+  /* Theme 1 */
+  /* background-color: #c59565; */
+  /* Theme 2 */
+  background-color: #e2b275;
+  /* Theme 3 */
+  /* background-color: #cfac86; */
   height: 200px;
-  width: 150px;
+  width: 250px;
   text-align: center;
   border-radius: 20%;
   margin: 5px;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
 }
 
 .opera_card--composer {
@@ -30,8 +50,9 @@ a:active {
 
 .opera_card--img {
   height: 75px;
-  width: auto;
+  width: 75px;
   border-radius: 50%;
+  align-self: center;
 }
 
 .opera_card--name {
@@ -41,4 +62,35 @@ a:active {
 
 .opera_card--view_roles {
   /* color: white; */
+}
+
+@media (max-width: 500px) {
+  .opera_card {
+    /* Theme 1 */
+    /* background-color: #c59565; */
+    /* Theme 2 */
+    /* background-color: #e2b275; */
+    /* Theme 3 */
+    background-color: #cfac86;
+    height: 200px;
+    width: 150px;
+    text-align: center;
+    border-radius: 20%;
+    margin: 5px;
+    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  }
+
+  .opera_card--composer {
+  }
+
+  .opera_card--img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    align-self: center;
+  }
 }

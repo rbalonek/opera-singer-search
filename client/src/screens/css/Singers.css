@@ -5,7 +5,7 @@
 }
 
 .singer_card {
-  background-color: rgb(242, 199, 109);
+  background-color: #e2b275;
   height: 200px;
   width: 250px;
   text-align: center;
@@ -26,10 +26,6 @@
 
 @media (max-width: 500px) {
   .singer_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgb(242, 199, 109);
     height: 200px;
     width: 100px;
     text-align: center;
