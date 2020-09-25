@@ -92,4 +92,3 @@ export default function EditRecentPerformances(props) {
     </form>
   );
 }
-////<button onClick={() => props.handleDelete(blog.id)}>Delete</button>

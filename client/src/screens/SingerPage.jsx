@@ -98,4 +98,3 @@ export default function SingerPage(props) {
     </div>
   );
 }
-//<button onClick={() => props.handleDelete(blog.id)}>Delete</button>
