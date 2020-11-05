@@ -32,11 +32,10 @@ a:hover {
   border-bottom: 4px solid blue;
   padding-top: 0.3em;
   border-radius: 1.5em;
-  background-color: white;
+  background-color: #c8edfd;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
   height: 14.4em;
   width: 14.4em;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
@@ -59,8 +58,47 @@ a:hover {
   margin-bottom: 0px; */
 }
 
-.opera_card--view_roles {
-  /* color: white; */
+.opera-roles-button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 12.8em;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  bottom: 10px;
+  border-top-left-radius: 70%;
+}
+
+.opera-roles-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.opera-roles-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.opera-roles-button:hover span {
+  padding-right: 15px;
+}
+
+.opera-roles-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 @media (max-width: 500px) {
@@ -68,15 +106,17 @@ a:hover {
     height: 200px;
     width: 200px;
   }
-
-  .opera_card--composer {
-  }
-
   .opera_card--img {
     height: 75px;
     width: 75px;
     border-radius: 50%;
     align-self: center;
+  }
+  .opera-roles-button {
+    position: relative;
+    bottom: 22px;
+    width: 199px;
+    justify-content: center;
   }
 }
 
@@ -87,5 +127,10 @@ a:hover {
   }
   .opera_card--composer {
     font-size: x-small;
+  }
+  .opera-roles-button {
+    position: relative;
+    bottom: 10px;
+    width: 149px;
   }
 }
