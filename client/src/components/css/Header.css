@@ -199,6 +199,13 @@
 
 /* MEDIA QUERIES */
 
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  .header--nrt_name {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 800px) {
   .header--nrt_name {
     top: -30px;
