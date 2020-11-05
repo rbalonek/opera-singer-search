@@ -27,22 +27,19 @@ a:hover {
 }
 
 .opera_card {
-  /* Theme 1 */
-  /* background-color: #c59565; */
-  /* Theme 2 */
-  background-color: #e2b275;
-  /* Theme 3 */
-  /* background-color: #cfac86; */
-  height: 200px;
-  width: 250px;
-  text-align: center;
-  border-radius: 20%;
-  margin: 5px;
-  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
+  border-bottom: 4px solid blue;
+  padding-top: 0.3em;
+  border-radius: 1.5em;
+  background-color: white;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  height: 14.4em;
+  width: 14.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .opera_card--composer {
@@ -56,8 +53,10 @@ a:hover {
 }
 
 .opera_card--name {
-  margin-top: 10px;
-  margin-bottom: 0px;
+  position: relative;
+
+  /* margin-top: 10px;
+  margin-bottom: 0px; */
 }
 
 .opera_card--view_roles {
@@ -66,22 +65,8 @@ a:hover {
 
 @media (max-width: 500px) {
   .opera_card {
-    /* Theme 1 */
-    /* background-color: #c59565; */
-    /* Theme 2 */
-    /* background-color: #e2b275; */
-    /* Theme 3 */
-    background-color: #cfac86;
     height: 200px;
-    width: 150px;
-    text-align: center;
-    border-radius: 20%;
-    margin: 5px;
-    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+    width: 200px;
   }
 
   .opera_card--composer {
@@ -92,5 +77,15 @@ a:hover {
     width: 75px;
     border-radius: 50%;
     align-self: center;
+  }
+}
+
+@media (max-width: 410px) {
+  .opera_card {
+    height: 200px;
+    width: 150px;
+  }
+  .opera_card--composer {
+    font-size: x-small;
   }
 }
