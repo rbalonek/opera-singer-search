@@ -56,14 +56,14 @@ export default function Login(props) {
         <button type="submit" value="Submit" className="submit-button">
           Submit
         </button>
-        <br />
-        <br />
-        <p>OR</p>
-        <br />
-        <Link to="/register">
-          <div className="register-button">Register</div>
-        </Link>
       </form>
+      <br />
+      <br />
+      <p>OR</p>
+      <br />
+      <Link to="/register">
+        <div className="register-button">Register</div>
+      </Link>
     </div>
   );
 }
