@@ -1,109 +1,236 @@
-Header {
+.Header {
   box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.5);
   height: 250px;
 }
-.header--nrt_title {
-  font-family: marzo-w00-regular, fantasy;
-  font-size: 50px;
-  position: relative;
-  margin-bottom: 0;
-  margin-top: 0;
+.nrt-logo {
+  height: 80px;
+  border-radius: 10%;
+  text-align: center;
 }
 
 .header--nrt_name {
   font-family: marzo-w00-regular, fantasy;
-  font-size: 25px;
   position: relative;
-  margin-top: -20px;
-}
-.header--search_operas {
-  /* width: 100px; */
+  top: -70px;
+  font-size: 50px;
+  text-align: center;
 }
 
-.header--search_singers {
-  /* position: relative;
-  text-align: right;
-  top: -40px; */
+.header--search_buttons {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -15px;
+}
+
+.header--search_operas-button,
+.header--search_singers-button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 0 20px;
+  border: none;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  font: normal normal bold 20px/40px "Baumans", Helvetica, sans-serif;
+  color: black;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgb(221, 221, 221);
+  -webkit-box-shadow: 0 1px 0 0 rgb(119, 119, 119), 0 2px 0 0 rgb(119, 119, 119),
+    0 3px 0 0 rgb(119, 119, 119), 0 4px 0 0 rgb(119, 119, 119),
+    0 5px 0 0 rgb(119, 119, 119), 0 6px 0 0 rgb(119, 119, 119),
+    0 0 5px 0 rgba(0, 0, 0, 0.0980392), 0 1px 3px 0 rgba(0, 0, 0, 0.298039),
+    0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.247059),
+    0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.14902);
+  box-shadow: 0 1px 0 0 rgb(119, 119, 119), 0 2px 0 0 rgb(119, 119, 119),
+    0 3px 0 0 rgb(119, 119, 119), 0 4px 0 0 rgb(119, 119, 119),
+    0 5px 0 0 rgb(119, 119, 119), 0 6px 0 0 rgb(119, 119, 119),
+    0 0 5px 0 rgba(0, 0, 0, 0.0980392), 0 1px 3px 0 rgba(0, 0, 0, 0.298039),
+    0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.247059),
+    0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.14902);
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.header--search_operas-button:hover,
+.header--search_singers-button:hover {
+  background: #ffffff;
+}
+
+.header--search_operas-button:active,
+.header--search_singers-button:active {
+  margin: 6px 0 0;
+  background: rgb(221, 221, 221);
+  -webkit-box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.247059),
+    0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 14px 20px 0 rgba(0, 0, 0, 0.14902);
+  box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.247059),
+    0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 14px 20px 0 rgba(0, 0, 0, 0.14902);
+}
+
+.header--search_operas-button:focus,
+.header--search_singers-button:focus {
+  background: rgb(221, 221, 221);
+}
+
+.login-div {
+  text-align: center;
+}
+
+.login-button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: -1px -1px 0 rgba(15, 73, 168, 0.66);
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.login-button:hover {
+  border: 1px solid #007cad;
+  background: rgba(0, 142, 198, 1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.login-button:active {
+  border: 1px solid #018dc4;
+  background: #00a6e8;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  text-shadow: none;
+  -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .header--current_username {
-  /* width: 200px;
-  text-align: center;
   position: relative;
-  top: -80px; */
+  top: 15px;
 }
 
 .header--current_user_div {
-  /* position: relative;
-  text-align: center; */
+  position: relative;
+  top: -0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--my_page-button,
+.header--logout_button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #3b9f20fa;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: -1px -1px 0 rgba(15, 73, 168, 0.66);
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .header--logout_button {
-  float: right;
-  position: relative;
-  top: -70px;
+  background: #9f2033fa;
+}
+
+.header--my_page-button:hover,
+.header--logout_button:hover {
+  border: 1px solid #007cad;
+  background: #75a26982;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.header--my_page-button:active,
+.header--logout_button:active {
+  border: 1px solid #018dc4;
+  background: #00a6e8;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  text-shadow: none;
+  -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .header--login_register_button {
-  /* position: relative;
-  top: -40px; */
+  position: relative;
+  text-align: center;
 }
 
-.header--my_page {
-  float: right;
-  position: relative;
-  bottom: 30px;
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .header--nrt_name {
+    top: -30px;
+    font-size: 50px;
+  }
 }
 
 /* Cell Phones */
-@media (max-width: 500px) {
-  .header--search_operas {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .header--search_singers {
-    text-align: center;
-  }
-  .header--current_user_div {
-    position: relative;
-    text-align: center;
-  }
-  .header--logout_button {
-    float: right;
-    position: relative;
-    top: -10px;
-  }
-
-  .header--my_page {
-    float: left;
-    position: relative;
-    bottom: 30px;
+@media (max-width: 480px) {
+  .header--nrt_name {
+    top: -20px;
+    font-size: 40px;
   }
 }
-/* My Phone */
-@media (max-width: 414px) {
-  .header--nrt_title {
-    font-family: marzo-w00-regular, fantasy;
-    font-size: 20px;
-    position: relative;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
+
+@media (max-width: 380px) {
   .header--nrt_name {
-    font-family: marzo-w00-regular, fantasy;
-    font-size: 20px;
-    position: relative;
-    margin-top: -20px;
+    top: -20px;
+    font-size: 30px;
   }
-  .header--logout_button {
-    float: right;
-    position: relative;
-    top: -50px;
+  .header--search_buttons {
+    flex-direction: column;
+    align-items: center;
   }
-  .header--my_page {
-    float: left;
-    position: relative;
-    bottom: 50px;
+  .header--search_operas-button {
+    margin-bottom: 50px;
+  }
+  .header--current_username {
+    font-size: small;
+    text-align: center;
+  }
+  .logo-div {
+    text-align: center;
   }
 }
