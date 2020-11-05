@@ -10,25 +10,31 @@ export default function Singers(props) {
   return (
     <div>
       <h3>Singers</h3>
-      <div className="singer_card_container">
-        {singers.map((singer) => (
-          <>
-            <div className="singer_card">
-              <p>{singer.username}</p>
 
-              <img
-                className="singer_card--img"
-                src={singer.user_img}
-                alt={singer.username}
-              />
-              <p className="singer_card--voice_type">{singer.voice_type}</p>
-              <Link to={`/singers/${singer.id}`}>
-                <p>View Roles ></p>
-              </Link>
-            </div>
-          </>
-        ))}
-      </div>
+      {singers.length ? (
+        <div className="singer_card_container">
+          {singers.map((singer) => (
+            <>
+              <div className="singer_card">
+                <p>{singer.username}</p>
+
+                <img
+                  className="singer_card--img"
+                  src={singer.user_img}
+                  alt={singer.username}
+                />
+                <p className="singer_card--voice_type">{singer.voice_type}</p>
+                <Link to={`/singers/${singer.id}`}>
+                  <p>View Roles ></p>
+                </Link>
+              </div>
+            </>
+          ))}
+        </div>
+      ) : (
+        <p>Waking up the database, please hold...</p>
+      )}
+
       <br />
     </div>
   );
