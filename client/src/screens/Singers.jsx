@@ -16,7 +16,7 @@ export default function Singers(props) {
           {singers.map((singer) => (
             <>
               <div className="singer_card">
-                <p>{singer.username}</p>
+                <p className="singer_card--name">{singer.username}</p>
 
                 <img
                   className="singer_card--img"
@@ -25,7 +25,9 @@ export default function Singers(props) {
                 />
                 <p className="singer_card--voice_type">{singer.voice_type}</p>
                 <Link to={`/singers/${singer.id}`}>
-                  <p>View Roles ></p>
+                  <button className="singer-roles-button">
+                    <span>View Roles</span>
+                  </button>
                 </Link>
               </div>
             </>

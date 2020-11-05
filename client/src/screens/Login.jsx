@@ -27,6 +27,15 @@ export default function Login(props) {
         }}
       >
         <h3>Login</h3>
+        <p>
+          <i>for sample of login experience, copy and paste:</i>
+        </p>
+        <p>
+          Username: <strong>Paul Barton</strong>
+        </p>
+        <p>
+          password: <strong>123456</strong>
+        </p>
         <div className="label-div">
           <label>
             <input

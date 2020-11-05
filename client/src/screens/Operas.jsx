@@ -22,7 +22,9 @@ export default function Operas(props) {
 
                 <p className="opera_card--composer">{opera.composer}</p>
                 <Link to={`/operas/${opera.id}`}>
-                  <p className="opera_card--view_roles">View Roles ></p>
+                  <button className="opera-roles-button">
+                    <span>View Roles</span>
+                  </button>
                 </Link>
               </div>
             </>

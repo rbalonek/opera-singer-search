@@ -27,22 +27,18 @@ a:hover {
 }
 
 .opera_card {
-  /* Theme 1 */
-  /* background-color: #c59565; */
-  /* Theme 2 */
-  background-color: #e2b275;
-  /* Theme 3 */
-  /* background-color: #cfac86; */
-  height: 200px;
-  width: 250px;
-  text-align: center;
-  border-radius: 20%;
-  margin: 5px;
-  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
+  border-bottom: 4px solid blue;
+  padding-top: 0.3em;
+  border-radius: 1.5em;
+  background-color: #c8edfd;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  height: 14.4em;
+  width: 14.4em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .opera_card--composer {
@@ -56,41 +52,85 @@ a:hover {
 }
 
 .opera_card--name {
-  margin-top: 10px;
-  margin-bottom: 0px;
+  position: relative;
+
+  /* margin-top: 10px;
+  margin-bottom: 0px; */
 }
 
-.opera_card--view_roles {
-  /* color: white; */
+.opera-roles-button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 12.8em;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  bottom: 10px;
+  border-top-left-radius: 70%;
+}
+
+.opera-roles-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.opera-roles-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.opera-roles-button:hover span {
+  padding-right: 15px;
+}
+
+.opera-roles-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 @media (max-width: 500px) {
   .opera_card {
-    /* Theme 1 */
-    /* background-color: #c59565; */
-    /* Theme 2 */
-    /* background-color: #e2b275; */
-    /* Theme 3 */
-    background-color: #cfac86;
     height: 200px;
-    width: 150px;
-    text-align: center;
-    border-radius: 20%;
-    margin: 5px;
-    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+    width: 200px;
   }
-
-  .opera_card--composer {
-  }
-
   .opera_card--img {
     height: 75px;
     width: 75px;
     border-radius: 50%;
     align-self: center;
+  }
+  .opera-roles-button {
+    position: relative;
+    bottom: 22px;
+    width: 199px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 410px) {
+  .opera_card {
+    height: 200px;
+    width: 150px;
+  }
+  .opera_card--composer {
+    font-size: x-small;
+  }
+  .opera-roles-button {
+    position: relative;
+    bottom: 10px;
+    width: 149px;
   }
 }

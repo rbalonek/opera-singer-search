@@ -5,14 +5,18 @@
 }
 
 .singer_card {
-  background-color: #e2b275;
-  height: 200px;
-  width: 250px;
-  text-align: center;
-  border-radius: 20%;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid blue;
+  padding-top: 0.3em;
+  border-radius: 1.5em;
+  background-color: #c8edfd;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
+  height: 14.4em;
+  width: 14.4em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .singer_card--img {
@@ -24,21 +28,75 @@
 .singer_card--voice_type {
 }
 
+.singer-roles-button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 12.8em;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  bottom: 10px;
+  border-top-left-radius: 70%;
+}
+
+.singer-roles-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.singer-roles-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.singer-roles-button:hover span {
+  padding-right: 15px;
+}
+
+.singer-roles-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 @media (max-width: 500px) {
   .singer_card {
     height: 200px;
-    width: 100px;
-    text-align: center;
-    border-radius: 10%;
-    margin: 5px;
-    box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
+    width: 200px;
   }
-
   .singer_card--img {
     height: 50px;
     width: 50px;
     border-radius: 20%;
     align-self: center;
+  }
+  .singer-roles-button {
+    margin-bottom: 20px;
+    width: 199px;
+  }
+}
+
+@media (max-width: 410px) {
+  .singer_card {
+    height: 200px;
+    width: 150px;
+  }
+  .singer_card--name {
+    font-size: small;
+  }
+  .singer-roles-button {
+    width: 150px;
   }
 }
