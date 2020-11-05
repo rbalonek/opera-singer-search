@@ -53,7 +53,9 @@ export default function Login(props) {
         </div>
         <br />
         <br />
-        <button className="submit-button">Submit</button>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
         <br />
         <br />
         <p>OR</p>
