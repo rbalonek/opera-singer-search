@@ -9,15 +9,9 @@ import RoleDetail from "../screens/RoleDetail";
 import SingerDetail from "../screens/SingerDetail";
 import SingerPage from "../screens/SingerPage";
 import Singers from "../screens/Singers";
-import {
-  deleteBlog,
-  getAllBlogs,
-  getAllUserBlogs,
-  postBlog,
-  putBlog,
-} from "../services/blogs";
+import { deleteBlog, getAllBlogs, postBlog, putBlog } from "../services/blogs";
 import { getAllOperas } from "../services/operas";
-import { getAllRoles, getAllRolesInOpera } from "../services/roles";
+import { getAllRoles } from "../services/roles";
 import { getAllUsers } from "../services/users";
 
 export default function MainContainer(props) {
@@ -124,11 +118,7 @@ export default function MainContainer(props) {
       </Route>
 
       <Route path="/singer_page/">
-        <SingerPage
-          currentUser={currentUser}
-          // blogs={blogs}
-          handleDelete={handleDelete}
-        />
+        <SingerPage currentUser={currentUser} handleDelete={handleDelete} />
       </Route>
     </Switch>
   );

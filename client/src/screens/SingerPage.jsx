@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import RolesPerformed from "../components/RolesPerformed";
+// import RolesPerformed from "../components/RolesPerformed";
 import { getAllUserBlogs } from "../services/blogs";
 import { showRolesForUser } from "../services/roles";
 import "./css/SingerPage.css";
@@ -84,11 +84,13 @@ export default function SingerPage(props) {
                   {" "}
                   <p>{blog.title}</p>{" "}
                 </Link>
-                <img className="singer_page_blog--img" src={blog.img}></img>
+                <img
+                  alt={blog.id}
+                  className="singer_page_blog--img"
+                  src={blog.img}
+                ></img>
                 <div className="singer_page_blog--delete">
-                  <button onClick={() => props.handleDelete(blog.id)}>
-                    Delete
-                  </button>
+                  <button onClick={() => handleDelete(blog.id)}>Delete</button>
                 </div>
               </div>
             ))}

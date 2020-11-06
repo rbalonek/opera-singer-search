@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./css/OperaDetail.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { getOneOpera, getRolesFromOneOpera } from "../services/operas";
-import { getAllRolesInOpera } from "../services/roles";
+import { getOneOpera } from "../services/operas"; //getRolesFromOneOpera
+// import { getAllRolesInOpera } from "../services/roles";
 
 export default function OperaDetail(props) {
   const [opera, setOpera] = useState(null);
@@ -21,21 +21,27 @@ export default function OperaDetail(props) {
     };
 
     fetchOpera();
-  }, []);
-  // console.log(roles)
+  }, [id]);
+  // console.log(roles);
 
   return (
     <div>
       <div className="opera_detail_container">
         {opera && (
-          <>
-            <img
-              className="opera_detail--opera_img"
-              src={opera.composer_img}
-              alt={opera.composer}
-            />
-            <h1 className="opera_detail--opera_name">{opera.name}</h1>
-            <h3 className="opera_detail--opera_composer">{opera.composer}</h3>
+          <div>
+            <div className="opera_detail--div">
+              <img
+                className="opera_detail--opera_img"
+                src={opera.composer_img}
+                alt={opera.composer}
+              />
+              <div className="opera_detail--div-two">
+                <h1 className="opera_detail--opera_name">{opera.name}</h1>
+                <h3 className="opera_detail--opera_composer">
+                  {opera.composer}
+                </h3>
+              </div>
+            </div>
             <h2 className="opera_detail--roles_text">Roles:</h2>
             <div className="opera_detail--opera_roles--container">
               {roles.map((role) => (
@@ -47,7 +53,7 @@ export default function OperaDetail(props) {
                 </Link>
               ))}
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
