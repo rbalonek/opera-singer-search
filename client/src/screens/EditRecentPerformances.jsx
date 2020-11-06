@@ -28,7 +28,7 @@ export default function EditRecentPerformances(props) {
     if (blogs.length) {
       prefilForm();
     }
-  }, [blogs]);
+  }, [id, blogs]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

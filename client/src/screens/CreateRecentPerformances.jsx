@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import "./css/CreateRecentPerformances.css";
 
 export default function CreateRecentPerformances(props) {
-  const currentUserid = props.currentUser.id;
+  // const currentUserid = props.currentUser.id;
   const [formData, setFormData] = useState({
     title: "",
     opera_company: "",
@@ -14,7 +14,7 @@ export default function CreateRecentPerformances(props) {
   });
   const { title, opera_company, date, img, text } = formData;
   const { createSubmit } = props;
-  const history = useHistory();
+  // const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;

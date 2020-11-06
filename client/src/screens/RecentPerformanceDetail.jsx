@@ -15,7 +15,7 @@ export default function RecentPerformanceDetail() {
     };
 
     fetchOneBlog();
-  }, []);
+  }, [id]);
 
   // console.log("blog", blog);
 
@@ -24,7 +24,7 @@ export default function RecentPerformanceDetail() {
       {blog && (
         <div className="blog--container">
           <div className="blog--container--left">
-            <img className="blog--img" src={blog.img}></img>
+            <img alt={blog.id} className="blog--img" src={blog.img}></img>
           </div>
           <div className="blog--container--right">
             <h1 className="blog--title">{blog.title}</h1>
