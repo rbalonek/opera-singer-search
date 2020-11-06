@@ -17,7 +17,7 @@ export default function RecentPerformanceDetail() {
     fetchOneBlog();
   }, []);
 
-  console.log("blog", blog);
+  // console.log("blog", blog);
 
   return (
     <div>

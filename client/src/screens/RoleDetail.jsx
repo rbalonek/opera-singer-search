@@ -19,7 +19,7 @@ export default function RoleDetail(props) {
     };
 
     fetchRole();
-  }, []);
+  }, [id]);
 
   const handleClick = async () => {
     const newRole = await addRole(id);
@@ -27,15 +27,17 @@ export default function RoleDetail(props) {
     history.push("/singer_page/");
   };
 
-  // console.log("users", users);
-  console.log("role", role.opera);
+  console.log("users", users);
+  // console.log("role", role.opera);
 
   return (
     <div>
       {props.currentUser && (
         <>
           <div className="add_to_roles_button">
-            <button onClick={handleClick}>Add to My Roles</button>
+            <button className="add-role_button" onClick={handleClick}>
+              Add to My Roles
+            </button>
           </div>
         </>
       )}
@@ -48,9 +50,18 @@ export default function RoleDetail(props) {
                 <div className="user_info--container">
                   <Link to={`/singers/${user.id}`}>
                     {" "}
-                    <p className="user_info--name">{user.username}</p>{" "}
+                    <button className="user_info--name">
+                      {user.username}
+                    </button>{" "}
                   </Link>
-                  <img className="user_info--img" src={user.user_img}></img>
+                  <img
+                    className="user_info--img"
+                    src={user.user_img}
+                    alt={user.id}
+                  ></img>
+                  <p>
+                    {user.city} - {user.voice_type}
+                  </p>
                 </div>
               ))}
             </div>

@@ -10,7 +10,7 @@ export default function SingerDetail(props) {
   const [singer, setSinger] = useState(null);
   const { id } = useParams();
 
-  const [roles, setRoles] = useState([]);
+  // const [roles, setRoles] = useState([]);
   const [performedRoles, setPerformedRoles] = useState([]);
   const [blogs, setBlogs] = useState([]);
 
@@ -21,7 +21,7 @@ export default function SingerDetail(props) {
     };
     const fetchRoles = async () => {
       const rolesArray = await showRolesForUser(id);
-      setRoles(rolesArray);
+      // setRoles(rolesArray);
       setPerformedRoles(rolesArray.roles);
     };
     const fetchBlogs = async () => {
@@ -31,8 +31,9 @@ export default function SingerDetail(props) {
     fetchSinger();
     fetchRoles();
     fetchBlogs();
-  }, []);
-
+  }, [id]);
+  // console.log("roles", roles);
+  // console.log("performedRoles", performedRoles);
   // console.log(blogs);
   return (
     <div className="singer_detail--container">
@@ -97,7 +98,11 @@ export default function SingerDetail(props) {
                       {blog.title}
                     </p>{" "}
                   </Link>
-                  <img className="singer_detail_blog--img" src={blog.img}></img>
+                  <img
+                    className="singer_detail_blog--img"
+                    alt={blog.id}
+                    src={blog.img}
+                  ></img>
                 </div>
               ))}
             </div>
