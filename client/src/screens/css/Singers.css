@@ -1,3 +1,11 @@
+.singers-title-div {
+  text-align: center;
+  position: relative;
+  top: -30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
 .singer_card_container {
   display: flex;
   flex-wrap: wrap;

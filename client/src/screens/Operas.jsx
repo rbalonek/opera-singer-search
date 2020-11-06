@@ -6,8 +6,9 @@ export default function Operas(props) {
   const { operas } = props;
   return (
     <div>
-      <h3>Operas</h3>
-
+      <div className="operas-title-div">
+        <h1>Operas</h1>
+      </div>
       {operas.length ? (
         <div className="opera_card_container">
           {operas.map((opera) => (

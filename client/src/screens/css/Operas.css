@@ -3,21 +3,16 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  /* Theme 1 */
-  /* color: #000000; */
-  /* Theme 2 */
-  /* color: #e6d4a8; */
-  /* Theme 3 */
-  color: #84563c;
 }
 a:hover {
-  /* Theme 1 */
-  /* color: #cfa892; */
-  /* Theme 2 */
-  /* color: #924222; */
-  /* Theme 3 */
-  /* color: #9a2b49c4; */
-  color: #b12b27;
+}
+
+.operas-title-div {
+  text-align: center;
+  position: relative;
+  top: -30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .opera_card_container {
