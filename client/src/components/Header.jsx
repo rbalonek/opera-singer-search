@@ -6,13 +6,6 @@ export default function Header(props) {
   const { currentUser } = props;
   return (
     <header>
-      <div className="logo-div">
-        <img
-          className="nrt-logo"
-          alt="nrt logo"
-          src="https://res.cloudinary.com/bobalobbadingdong/image/upload/v1604555551/Find-Singer-p4/Screen_Shot_2020-11-04_at_9.47.42_PM_cqcxlc.png"
-        ></img>
-      </div>
       <h1 className="header--nrt_name">Opera Singer Search</h1>
 
       <div className="header--search_buttons">

@@ -9,8 +9,9 @@ export default function Singers(props) {
 
   return (
     <div>
-      <h3>Singers</h3>
-
+      <div className="singers-title-div">
+        <h1>Singers</h1>
+      </div>
       {singers.length ? (
         <div className="singer_card_container">
           {singers.map((singer) => (
