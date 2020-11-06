@@ -6,6 +6,7 @@ export default function Header(props) {
   const { currentUser } = props;
   return (
     <header>
+      <div className="background-img"></div>
       <h1 className="header--nrt_name">Opera Singer Search</h1>
 
       <div className="header--search_buttons">
