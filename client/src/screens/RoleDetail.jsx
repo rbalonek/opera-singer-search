@@ -112,12 +112,20 @@ export default function RoleDetail(props) {
               ))}
             </div>
           </>
-        ) : (
-          <div className="ah">
-            <h1>Ainnoboddy Hurrr</h1>
-          </div>
         )}
       </>
+      {users.length ? (
+        <div></div>
+      ) : (
+        <div className="empty-role">
+          <h1>No singers yet! </h1>
+          <h2>Register an account and be the first to claim this role!</h2>
+          <br />
+          <Link to="/register">
+            <div className="register-button">Register</div>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

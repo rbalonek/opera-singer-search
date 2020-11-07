@@ -69,6 +69,14 @@
   width: auto;
 }
 
+.empty-role {
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+
+/* Media Queries */
+
 @media (max-width: 500px) {
   .user_info--name {
     border-radius: 10px;
