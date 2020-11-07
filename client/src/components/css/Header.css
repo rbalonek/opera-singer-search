@@ -241,6 +241,13 @@ header {
   }
 }
 
+@media (max-width: 400px) {
+  .header--current_username {
+    font-size: small;
+    text-align: center;
+  }
+}
+
 @media (max-width: 380px) {
   .header--search_buttons {
     flex-direction: column;
@@ -252,7 +259,7 @@ header {
     margin-bottom: 50px;
   }
   .header--current_username {
-    font-size: small;
+    font-size: x-small;
     text-align: center;
   }
   .logo-div {
@@ -270,5 +277,9 @@ header {
   }
   .background-img {
     height: 245px;
+  }
+  .header--current_username {
+    font-size: xx-small;
+    text-align: center;
   }
 }

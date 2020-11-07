@@ -34,7 +34,7 @@ export default function SingerDetail(props) {
   }, [id]);
   // console.log("roles", roles);
   // console.log("performedRoles", performedRoles);
-  // console.log(blogs);
+  console.log(blogs);
   return (
     <div className="singer_detail--container">
       {singer && (
@@ -45,23 +45,25 @@ export default function SingerDetail(props) {
               src={singer.user_img}
               alt={singer.username}
             />
-            <div className="singer_detail--header--username_container">
-              <h1 className="singer_detail--header--username">
-                {singer.username}
-                <br />
-                {singer.voice_type}
-              </h1>
+            <div className="singer_detail--body">
+              <div className="singer_detail--header--username_container">
+                <h1 className="singer_detail--header--username">
+                  {singer.username}
+                  <br />
+                  {singer.voice_type}
+                </h1>
+              </div>
+              <div className="singer_detail--web_city_bio">
+                <p>Website: {singer.website}</p>
+                <p>City: {singer.city}</p>
+                <p>Bio: {singer.bio}</p>
+              </div>
             </div>
           </div>
+
           <div className="singer_detail-map_container">
             {performedRoles && (
               <>
-                <div className="singer_detail--web_city_bio">
-                  <p>Website: {singer.website}</p>
-                  <p>City: {singer.city}</p>
-                  <p>Bio: {singer.bio}</p>
-                </div>
-
                 <div className="roles_performed--container">
                   <h2 className="roles_performed--title">Roles</h2>
                   {performedRoles.map((performedRole) => (
@@ -92,17 +94,19 @@ export default function SingerDetail(props) {
             <div className="all_blogs--container">
               {blogs.map((blog) => (
                 <div className="singer_detail_blog--container">
-                  <Link to={`/BlogDetail/${blog.id}`}>
-                    {" "}
-                    <p className="singer_detail_blog--title">
-                      {blog.title}
-                    </p>{" "}
-                  </Link>
                   <img
                     className="singer_detail_blog--img"
                     alt={blog.id}
                     src={blog.img}
                   ></img>
+                  <p className="blog-company">{blog.opera_company}</p>
+                  <p className="blog-date">{blog.date}</p>
+                  <Link to={`/BlogDetail/${blog.id}`}>
+                    {" "}
+                    <button className="singer_detail_blog--title">
+                      <span> {blog.title}</span>
+                    </button>{" "}
+                  </Link>
                 </div>
               ))}
             </div>
