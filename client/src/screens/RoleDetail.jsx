@@ -44,7 +44,8 @@ export default function RoleDetail(props) {
   };
 
   console.log("users", users);
-  // console.log("role", role.opera);
+  console.log("role", role.opera);
+  // console.log("opera", opera);
 
   return (
     <div>

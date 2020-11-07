@@ -32,7 +32,9 @@ export default function RecentPerformanceDetail() {
             <p className="blog--date">{blog.date}</p>
             <p className="blog--text">{blog.text}</p>
             <Link to={`/singers/${blog.user_id}`}>
-              <p>Back to singer page</p>
+              <button className="singer_page-button">
+                <span>Back to singer page</span>
+              </button>
             </Link>
           </div>
         </div>
