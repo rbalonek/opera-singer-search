@@ -112,6 +112,10 @@ export default function RoleDetail(props) {
               ))}
             </div>
           </>
+        ) : (
+          <div className="ah">
+            <h1>Ainnoboddy Hurrr</h1>
+          </div>
         )}
       </>
     </div>
