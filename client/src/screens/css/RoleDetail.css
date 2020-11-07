@@ -5,6 +5,10 @@
   border-radius: 20%;
 }
 
+.add_to_roles_button {
+  text-align: center;
+}
+
 .add-role_button {
   background-color: #4caf50; /* Green */
   border: none;

@@ -10,7 +10,7 @@ export default function RoleDetail(props) {
   const [users, setUsers] = useState([]);
   const { id } = useParams();
   const history = useHistory();
-  // const { currentUser } = props;
+  const { currentUser } = props;
 
   const [opera, setOpera] = useState(null);
   const roles = props.roles.filter(
@@ -19,12 +19,12 @@ export default function RoleDetail(props) {
 
   useEffect(() => {
     const fetchOpera = async () => {
-      const singleOpera = await getOneOpera(id);
+      const singleOpera = await getOneOpera(role.opera_id);
       setOpera(singleOpera);
     };
 
     fetchOpera();
-  }, [id]);
+  }, [role.opera_id]);
 
   useEffect(() => {
     const fetchRole = async () => {
@@ -43,21 +43,12 @@ export default function RoleDetail(props) {
     history.push("/singer_page/");
   };
 
-  console.log("users", users);
-  console.log("role", role.opera);
+  // console.log("users", users);
+  // console.log("role", role.opera_id);
   // console.log("opera", opera);
 
   return (
     <div>
-      {props.currentUser && (
-        <>
-          <div className="add_to_roles_button">
-            <button className="add-role_button" onClick={handleClick}>
-              Add to My Roles
-            </button>
-          </div>
-        </>
-      )}
       <div className="opera_detail_container">
         {opera && (
           <div>
@@ -90,6 +81,15 @@ export default function RoleDetail(props) {
       </div>
       <h1 className="role-name">All Singers - {role.name}</h1>
       <>
+        {currentUser && (
+          <>
+            <div className="add_to_roles_button">
+              <button className="add-role_button" onClick={handleClick}>
+                Add to My Roles
+              </button>
+            </div>
+          </>
+        )}
         {role && (
           <>
             <div className="user_card_container">
