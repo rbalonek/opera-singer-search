@@ -4,19 +4,21 @@
 .singer_detail--header {
   width: 100%;
   display: flex;
+  /* flex-direction: column; */
 }
 .singer_detail--header--img {
-  height: 300px;
-  /* width: 100px; */
-  width: auto;
+  height: 200px;
+  width: 200px;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.singer_detail--body {
 }
 
 .singer_detail--header--username_container {
   position: relative;
   top: -40px;
   min-width: fit-content;
-  /* margin-left: 20px; */
 }
 .singer_detail--header--username {
   font-size: 4vw;
@@ -29,6 +31,7 @@
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
   min-width: fit-content;
+  padding: 10px;
 }
 
 .roles_performed--title {
@@ -48,6 +51,11 @@
   font-size: 2vw;
   padding-left: 20px;
   padding-right: 20px;
+  top: -40px;
+}
+
+.singer_detail-map_container {
+  float: left;
 }
 
 .all_blogs--container {
@@ -56,22 +64,102 @@
 }
 
 .singer_detail_blog--container {
-  background-color: #e2b275;
-  height: 200px;
-  width: 250px;
-  text-align: center;
-  border-radius: 20%;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid blue;
+  padding-top: 0.3em;
+  border-radius: 1.5em;
+  background-color: #c8edfd;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  height: 14.4em;
+  width: 14.4em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .singer_detail_blog--title {
+  border-radius: 40px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  width: 230px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  bottom: 25px;
+}
+
+.singer_detail_blog--title span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.singer_detail_blog--title span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.singer_detail_blog--title:hover span {
+  padding-right: 15px;
+}
+
+.singer_detail_blog--title:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 .singer_detail_blog--img {
   height: 100px;
   width: auto;
+  border-radius: 10%;
+}
+.blog-date {
+  position: relative;
+  top: -20px;
+}
+
+@media (max-width: 800px) {
+  .all_blogs--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .singer_detail-map_container {
+    float: none;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 500px) {
+  /* .blog-date {
+    display: none;
+  }
+  .blog-company {
+    display: none;
+  } */
+  .singer_detail_blog--title {
+    border-radius: 40px;
+    background-color: #f4511e;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    width: 230px;
+    height: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    bottom: 35px;
+  }
+
   .singer_detail--header--img {
     height: 100px;
     width: auto;
@@ -79,7 +167,7 @@
   }
   .singer_detail--header--username_container {
     position: relative;
-    top: -10px;
+    top: -45px;
     min-width: fit-content;
     margin-left: 10px;
   }
@@ -90,7 +178,6 @@
   .singer_detail-map_container {
     text-align: -webkit-center;
   }
-  /* text-align: -webkit-center; */
 
   .roles_performed--container {
     width: 50%;
@@ -129,15 +216,10 @@
     padding-right: 5px;
   }
 
-  .all_blogs--container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .singer_detail_blog--container {
-    background-color: #e2b275;
-    height: 100px;
+    height: 150px;
     width: 100px;
+
     text-align: center;
     border-radius: 20%;
     margin: 5px;

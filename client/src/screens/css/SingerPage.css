@@ -44,15 +44,18 @@
 }
 
 .singer_page_blog--container {
-  background-color: #e2b275;
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  border-radius: 20%;
-  margin: 5px;
-  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
+  border-bottom: 4px solid blue;
+  padding-top: 0.3em;
+  border-radius: 1.5em;
+  background-color: #c8edfd;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+  height: 14.4em;
+  width: 14.4em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .singer_page_blog--title {
 }
@@ -64,7 +67,7 @@
 }
 .singer_page_blog--delete {
   position: relative;
-  bottom: -15px;
+  bottom: 5px;
   right: 0px;
 }
 .all_blogs--container {
@@ -73,13 +76,205 @@
   justify-content: space-around;
 }
 
+.button-delete {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  top: 0;
+  border: 1px solid #b21522;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  font: normal 20px/1.1 "Black Ops One", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  background: -webkit-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c91826;
+  background: -moz-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c91826;
+  background: radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c91826;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 158px 142px;
+  background-size: 158px 142px;
+  -webkit-box-shadow: 1px 16px 10px 5px rgba(0, 0, 0, 0.2), 0 14px 0 0 #000000,
+    4px 8px 15px 4px rgba(0, 0, 0, 0.4),
+    5px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    5px -4px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -2px 3px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 16px 10px 5px rgba(0, 0, 0, 0.2), 0 14px 0 0 #000000,
+    4px 8px 15px 4px rgba(0, 0, 0, 0.4),
+    5px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    5px -4px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -2px 3px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 0 -1px 0 rgba(40, 40, 40, 0.6);
+  -webkit-transition: all 40ms cubic-bezier(0.6, -0.28, 0.735, 0.04);
+  -moz-transition: all 40ms cubic-bezier(0.6, -0.28, 0.735, 0.04);
+  -o-transition: all 40ms cubic-bezier(0.6, -0.28, 0.735, 0.04);
+  transition: all 40ms cubic-bezier(0.6, -0.28, 0.735, 0.04);
+  -webkit-transform: rotateX(35deg) translateY(15px) translateZ(40px);
+  transform: rotateX(35deg) translateY(15px) translateZ(40px);
+}
+
+.button-delete:hover {
+  background: -webkit-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.28) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #a80008;
+  background: -moz-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.28) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #a80008;
+  background: radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.28) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #a80008;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 158px 142px;
+  background-size: 158px 142px;
+  -webkit-box-shadow: 1px 16px 10px 5px rgba(0, 0, 0, 0.2), 0 14px 0 0 #000000,
+    4px 8px 15px 4px rgba(0, 0, 0, 0.4),
+    5px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    5px -4px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -2px 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 16px 10px 5px rgba(0, 0, 0, 0.2), 0 14px 0 0 #000000,
+    4px 8px 15px 4px rgba(0, 0, 0, 0.4),
+    5px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    5px -4px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -2px 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: all 0 cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 0 cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0 cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0 cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button-delete:active {
+  position: relative;
+  cursor: default;
+  top: 6px;
+  background: -webkit-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c60009;
+  background: -moz-radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c60009;
+  background: radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #c60009;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 158px 142px;
+  background-size: 158px 142px;
+  -webkit-box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.4), 0 7px 0 0 #000000,
+    1px 2px 1px 1px rgba(0, 0, 0, 0.6),
+    3px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    3px -6px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -1px 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.4), 0 7px 0 0 #000000,
+    1px 2px 1px 1px rgba(0, 0, 0, 0.6),
+    3px 1px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    3px -6px 5px 0 rgba(255, 255, 255, 0.2) inset,
+    -1px 1px 4px 0 rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: all 40ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 40ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 40ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 40ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.blog-title {
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  width: 230px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  bottom: -10px;
+  border-top-left-radius: 70%;
+}
+
+.blog-title span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.blog-title span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.blog-title:hover span {
+  padding-right: 15px;
+}
+
+.blog-title:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Media Queries */
+
 /* Cell Phones */
 @media (max-width: 500px) {
   .singer_page_roles_performed--container:hover {
     transform: scale(2);
   }
   .singer_page_blog--container {
-    background-color: #e2b275;
     height: 130px;
     width: 100px;
     text-align: center;
@@ -89,17 +284,26 @@
     display: flex;
     flex-direction: column;
   }
-  .singer_page_blog--title {
-  }
   .singer_page_blog--img {
     height: 40px;
     width: 50%;
     align-self: center;
     border-radius: 20%;
-  }
-  .singer_page_blog--delete {
     position: relative;
-    bottom: -15px;
-    right: 0px;
+    bottom: 0px;
+  }
+
+  .button-delete {
+    width: 50px;
+    height: 25px;
+    font: normal 10px/1.1 "Black Ops One", Helvetica, sans-serif;
+    position: relative;
+    top: 0px;
+  }
+  .blog-title {
+    font-size: 18px;
+    width: 100px;
+    height: 25px;
+    bottom: -10px;
   }
 }

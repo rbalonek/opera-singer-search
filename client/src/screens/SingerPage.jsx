@@ -82,7 +82,9 @@ export default function SingerPage(props) {
               <div className="singer_page_blog--container">
                 <Link to={`/singer_page/${blog.id}/edit_blog`}>
                   {" "}
-                  <p>{blog.title}</p>{" "}
+                  <button className="blog-title">
+                    <span>{blog.title}</span>
+                  </button>{" "}
                 </Link>
                 <img
                   alt={blog.id}
@@ -90,7 +92,12 @@ export default function SingerPage(props) {
                   src={blog.img}
                 ></img>
                 <div className="singer_page_blog--delete">
-                  <button onClick={() => handleDelete(blog.id)}>Delete</button>
+                  <button
+                    className="button-delete"
+                    onClick={() => handleDelete(blog.id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}
