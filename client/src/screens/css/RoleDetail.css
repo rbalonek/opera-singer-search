@@ -1,5 +1,12 @@
 .role-name {
   text-align: center;
+  background-color: bisque;
+  border-top-style: inset;
+  border-radius: 20%;
+}
+
+.add_to_roles_button {
+  text-align: center;
 }
 
 .add-role_button {
@@ -61,15 +68,56 @@
   border-top-left-radius: 70%;
 }
 
+.user_info--name span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.user_info--name span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.user_info--name:hover span {
+  padding-right: 15px;
+}
+
+.user_info--name:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 .user_info--img {
   height: 100px;
   width: auto;
 }
 
+.empty-role {
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+
+/* Media Queries */
+
 @media (max-width: 500px) {
+  .user_info--name {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    bottom: 0px;
+    border-top-left-radius: 70%;
+  }
   .user_info--container {
-    background-color: #f4d35e;
-    height: 100px;
+    height: 200px;
     width: 150px;
     text-align: center;
     border-radius: 20%;
